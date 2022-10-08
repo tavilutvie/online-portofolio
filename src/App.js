@@ -19,7 +19,6 @@ import About from './pages/About';
 import Awards from './pages/Awards';
 import Education from './pages/Education';
 import Experience from './pages/Experience';
-import Interests from './pages/Interests';
 import Skills from './pages/Skills';
 
 function App() {
@@ -36,7 +35,6 @@ function App() {
             <Route path='/Awards' element={<Awards />} />
             <Route path='/Education' element={<Education />} />
             <Route path='/Experience' element={<Experience />} />
-            <Route path='/Interests' element={<Interests />} />
             <Route path='/Skills' element={<Skills />} />
           </Routes>
         </main>

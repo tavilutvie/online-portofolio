@@ -21,9 +21,6 @@ const Navbar = () =>{
                 <Link to="/experience"><button class="button-49" role="button">Experience</button></Link>
             </div>
             <div className="nav-links">
-                <Link to="/interests"><button class="button-49" role="button">Interests</button></Link>
-            </div>
-            <div className="nav-links">
                 <Link to="/skills"><button class="button-49" role="button">Skills</button></Link>
             </div>
         </nav>
