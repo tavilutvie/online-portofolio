@@ -1,0 +1,16 @@
+.about-profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 110, 255);
+    object-fit: cover;
+    object-position: 0px 20%;
+    align-items: center;
+    overflow-x: hidden;
+    margin: auto;
+    padding: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

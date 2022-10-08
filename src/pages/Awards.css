@@ -1,0 +1,9 @@
+.awards1 {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: 0px 60%;
+    padding: 0%;
+}
