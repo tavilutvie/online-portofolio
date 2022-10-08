@@ -29,6 +29,7 @@ function App() {
       </div>
       <div class='split content'>
         <main>
+          <img id="bg" src="./images/foto4.jpg" alt="Background" />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/about" element={<About />} />
