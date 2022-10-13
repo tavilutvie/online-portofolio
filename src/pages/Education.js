@@ -19,6 +19,8 @@ import {
   Stack,
   useBreakpointValue,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import Carousel from '../components/Carousel';
 
 const BlogTags = (props) => {
     return (
@@ -138,9 +140,9 @@ const Education = () => {
               marginTop="2"
               color={useColorModeValue('gray.700', 'gray.200')}
               fontSize="lg">
-              Major&emsp;: 
+              Major&emsp;: <spacing></spacing>
               <Link href='https://www.its.ac.id/informatika/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                Informatics Engineering
+                Informatics Engineering <ExternalLinkIcon mx='2px' />
               </Link>
               <br></br>
               Current GPA&emsp;: 3.76 / 4.00
@@ -148,6 +150,9 @@ const Education = () => {
               Year&emsp;: 2020 - Present
             </Text>
           </Box>
+        </Box>
+        <Box marginTop={'50px'}>
+          <Carousel />
         </Box>
         <Heading as="h2" marginTop="10">
           Past Educations
@@ -262,9 +267,7 @@ const Education = () => {
                 <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
                 </Center>
                 <Text as="p" fontSize="md" marginTop="2">
-                  Major&emsp;: Science
-                  <br></br>
-                  Year&emsp;: 2018 - 2014
+                  Year&emsp;: 2008 - 2014
                 </Text>
               </Box>
         </Flex>
