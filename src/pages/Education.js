@@ -129,6 +129,7 @@ const Education = () => {
         textAlign={'center'} 
         align={'center'} 
         justify={'center'}>
+        <Box w="100%">
         <Wrap spacing="30px" marginTop="5">
           <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
             <Box w="100%">
@@ -161,6 +162,16 @@ const Education = () => {
             </Box>
           </WrapItem>
         </Wrap>
+        </Box>
+        </Flex>
+        <Flex p={8} flex={1} 
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'} 
+        align={'center'} 
+        justify={'center'}>
+        <Box w="100%">
         <Wrap spacing="30px" marginTop="5">
           <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
             <Box w="100%">
@@ -168,8 +179,8 @@ const Education = () => {
                 <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                   <Image
                     transform="scale(1.0)"
-                    src={'images/logo-smala.png'}
-                    alt="smala"
+                    src={'images/logo-spensa.png'}
+                    alt="spensa"
                     objectFit="contain"
                     width="100%"
                     transition="0.3s ease-in-out"
@@ -193,6 +204,16 @@ const Education = () => {
             </Box>
           </WrapItem>
         </Wrap>
+        </Box>
+        </Flex>
+        <Flex p={8} flex={1} 
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'} 
+        align={'center'} 
+        justify={'center'}>
+        <Box w="100%">
         <Wrap spacing="30px" marginTop="5">
           <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
             <Box w="100%">
@@ -200,8 +221,8 @@ const Education = () => {
                 <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                   <Image
                     transform="scale(1.0)"
-                    src={'images/logo-smala.png'}
-                    alt="smala"
+                    src={'images/logo-pjs.png'}
+                    alt="pjs"
                     objectFit="contain"
                     width="100%"
                     transition="0.3s ease-in-out"
@@ -225,6 +246,7 @@ const Education = () => {
             </Box>
           </WrapItem>
         </Wrap>
+        </Box>
         </Flex>
       </Container>
     );
