@@ -15,6 +15,7 @@ import {
   Container,
   VStack,
   Flex,
+  Center,
 } from '@chakra-ui/react';
 
 const BlogTags = (props) => {
@@ -129,124 +130,99 @@ const Education = () => {
         textAlign={'center'} 
         align={'center'} 
         justify={'center'}>
-        <Box w="100%">
-        <Wrap spacing="30px" marginTop="5">
-          <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
-            <Box w="100%">
-              <Box borderRadius="lg" overflow="hidden">
-                <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                  <Image
-                    transform="scale(1.0)"
-                    src={'images/logo-smala.png'}
-                    alt="smala"
-                    objectFit="contain"
-                    width="100%"
-                    transition="0.3s ease-in-out"
-                    _hover={{
-                      transform: 'scale(1.05)',
-                    }}
-                  />
-                </Link>
+          <Center>
+              <Box w="100%">
+                <Box borderRadius="lg" overflow="hidden">
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    <Image
+                      boxSize='300px'
+                      transform="scale(1.0)"
+                      src={'images/logo-smala.png'}
+                      alt="smala"
+                      objectFit="contain"
+                      width="100%"
+                      transition="0.3s ease-in-out"
+                      _hover={{
+                        transform: 'scale(1.05)',
+                      }}
+                    />
+                  </Link>
+                </Box>
+                <Heading fontSize="xl" marginTop="2">
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    SMA Negeri 5 Surabaya
+                  </Link>
+                </Heading>
+                <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
+                <Text as="p" fontSize="md" marginTop="2">
+                  Major&emsp;: Science
+                  <br></br>
+                  Year&emsp;: 2017 - 2020
+                </Text>
               </Box>
-              <Heading fontSize="xl" marginTop="2">
-                <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                  SMA Negeri 5 Surabaya
-                </Link>
-              </Heading>
-              <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
-              <Text as="p" fontSize="md" marginTop="2">
-                Major&emsp;: Science
-                <br></br>
-                Year&emsp;: 2017 - 2020
-              </Text>
-            </Box>
-          </WrapItem>
-        </Wrap>
-        </Box>
-        </Flex>
-        <Flex p={8} flex={1} 
-        alignContent={'center'}
-        alignSelf={'center'}
-        alignItems={'center'}
-        textAlign={'center'} 
-        align={'center'} 
-        justify={'center'}>
-        <Box w="100%">
-        <Wrap spacing="30px" marginTop="5">
-          <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
-            <Box w="100%">
-              <Box borderRadius="lg" overflow="hidden">
-                <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                  <Image
-                    transform="scale(1.0)"
-                    src={'images/logo-spensa.png'}
-                    alt="spensa"
-                    objectFit="contain"
-                    width="100%"
-                    transition="0.3s ease-in-out"
-                    _hover={{
-                      transform: 'scale(1.05)',
-                    }}
-                  />
-                </Link>
+          </Center>
+          <Center>
+              <Box w="100%">
+                <Box borderRadius="lg" overflow="hidden">
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    <Image
+                      boxSize='300px'
+                      transform="scale(1.0)"
+                      src={'images/logo-spensa.png'}
+                      alt="spensa"
+                      objectFit="contain"
+                      width="100%"
+                      transition="0.3s ease-in-out"
+                      _hover={{
+                        transform: 'scale(1.05)',
+                      }}
+                    />
+                  </Link>
+                </Box>
+                <Heading fontSize="xl" marginTop="2">
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    SMA Negeri 5 Surabaya
+                  </Link>
+                </Heading>
+                <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
+                <Text as="p" fontSize="md" marginTop="2">
+                  Major&emsp;: Science
+                  <br></br>
+                  Year&emsp;: 2017 - 2020
+                </Text>
               </Box>
-              <Heading fontSize="xl" marginTop="2">
-                <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                  SMA Negeri 5 Surabaya
-                </Link>
-              </Heading>
-              <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
-              <Text as="p" fontSize="md" marginTop="2">
-                Major&emsp;: Science
-                <br></br>
-                Year&emsp;: 2017 - 2020
-              </Text>
-            </Box>
-          </WrapItem>
-        </Wrap>
-        </Box>
-        </Flex>
-        <Flex p={8} flex={1} 
-        alignContent={'center'}
-        alignSelf={'center'}
-        alignItems={'center'}
-        textAlign={'center'} 
-        align={'center'} 
-        justify={'center'}>
-        <Box w="100%">
-        <Wrap spacing="30px" marginTop="5">
-          <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
-            <Box w="100%">
-              <Box borderRadius="lg" overflow="hidden">
-                <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                  <Image
-                    transform="scale(1.0)"
-                    src={'images/logo-pjs.png'}
-                    alt="pjs"
-                    objectFit="contain"
-                    width="100%"
-                    transition="0.3s ease-in-out"
-                    _hover={{
-                      transform: 'scale(1.05)',
-                    }}
-                  />
-                </Link>
+          </Center>
+          <Center>
+              <Box w="100%">
+                <Box borderRadius="lg" overflow="hidden">
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    <Image
+                      boxSize='300px'
+                      transform="scale(1.0)"
+                      src={'images/logo-pjs.png'}
+                      alt="pjs"
+                      objectFit="contain"
+                      width="100%"
+                      transition="0.3s ease-in-out"
+                      _hover={{
+                        transform: 'scale(1.05)',
+                      }}
+                    />
+                  </Link>
+                </Box>
+                <Heading fontSize="xl" marginTop="2">
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    SMA Negeri 5 Surabaya
+                  </Link>
+                </Heading>
+                <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
+                <Text as="p" fontSize="md" marginTop="2">
+                  Major&emsp;: Science
+                  <br></br>
+                  Year&emsp;: 2017 - 2020
+                </Text>
               </Box>
-              <Heading fontSize="xl" marginTop="2">
-                <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                  SMA Negeri 5 Surabaya
-                </Link>
-              </Heading>
-              <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
-              <Text as="p" fontSize="md" marginTop="2">
-                Major&emsp;: Science
-                <br></br>
-                Year&emsp;: 2017 - 2020
-              </Text>
-            </Box>
-          </WrapItem>
-        </Wrap>
-        </Box>
+          </Center>
         </Flex>
       </Container>
     );
