@@ -66,47 +66,21 @@ export default function About() {
               _hover={{
                 bg: 'blue.500',
               }}>
-              Create Project
+              My First Portofolio
             </Button>
-            <Button rounded={'full'}>How It Works</Button>
+            <Button rounded={'full'}>My Second Portofolio</Button>
           </Stack>
         </Stack>
       </Flex>
       <Flex flex={1}>
         <Image
           borderRadius='full'
-          alt={'Login Image'}
+          alt={'Profile Picture'}
           objectFit={'cover'}
           src={'images/foto.jpg'}
         />
       </Flex>
     </Stack>
-    // <div>
-    //   <Center>
-    //     <h1>About Me</h1>
-    //   </Center>
-    //   <br></br>
-    //   <Center>
-    //     <Box boxSize='sm'>
-    //     <Center>
-    //       <Image 
-    //       borderRadius='full' 
-    //       objectPosition='0px 20%' 
-    //       boxSize='300px' 
-    //       objectFit='cover' 
-    //       className="about-photo" 
-    //       src='images/foto.jpg' 
-    //       alt='Eldenabih Tavirazin Lutvie' />
-    //       </Center>
-    //     </Box>
-    //   </Center>
-    //   <Center>
-    //     <p>Hello!</p>
-    //   </Center>
-    //   <Center>
-    //     <p>My name is Eldenabih Tavirazin Lutvie from the Department of Informatics Engineering, Sepuluh Nopember Institute of Technology. I live in the city of Surabaya, East Java. I have a desire to become a great Software Developer.</p>
-    //   </Center>
-    // </div>
     );
   
 }
