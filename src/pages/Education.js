@@ -131,7 +131,7 @@ const Education = () => {
         align={'center'} 
         justify={'center'}>
           <Center>
-              <Box w="100%">
+              <Box flex='1' w="100%" padding={'30px'}>
                 <Box borderRadius="lg" overflow="hidden">
                   <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     <Image
@@ -162,7 +162,7 @@ const Education = () => {
               </Box>
           </Center>
           <Center>
-              <Box w="100%">
+              <Box flex='1' w="100%" padding={'30px'}>
                 <Box borderRadius="lg" overflow="hidden">
                   <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     <Image
@@ -193,7 +193,7 @@ const Education = () => {
               </Box>
           </Center>
           <Center>
-              <Box w="100%">
+              <Box flex='1' w="100%" padding={'30px'}>
                 <Box borderRadius="lg" overflow="hidden">
                   <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     <Image
