@@ -105,10 +105,10 @@ export default function Navbar() {
                             <p>Eldenabih Tavirazin Lutvie</p>
                         </Center>
                         <MenuDivider />
-                        <MenuItem>Link 1</MenuItem>
-                        <MenuItem>Link 2</MenuItem>
+                        <MenuItem>My First Portofolio</MenuItem>
+                        <MenuItem>My Second Portofolio</MenuItem>
                         <MenuDivider />
-                        <MenuItem>Link 3</MenuItem>
+                        <MenuItem>My Projects</MenuItem>
                     </MenuList>
                     </Menu>
                     </Stack>
@@ -131,11 +131,11 @@ export default function Navbar() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/About' element={<About />} />
-              <Route path='/Awards' element={<Awards />} />
               <Route path='/Education' element={<Education />} />
+              <Route path='/Awards' element={<Awards />} />
               <Route path='/Experience' element={<Experience />} />
-              <Route path='/Contact' element={<Contact />} />
               <Route path='/Skills' element={<Skills />} />
+              <Route path='/Contact' element={<Contact />} />
             </Routes>
           </main>
         </div>
