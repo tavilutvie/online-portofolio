@@ -27,7 +27,13 @@ import React, { Component } from 'react';
 export default function About() {
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-      <Flex p={8} flex={1} textAlign={'center'} align={'center'} justify={'center'}>
+      <Flex p={8} flex={1} 
+      alignContent={'center'}
+      alignSelf={'center'}
+      alignItems={'center'}
+      textAlign={'center'} 
+      align={'center'} 
+      justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
             <Text
@@ -58,18 +64,20 @@ export default function About() {
             <br></br>
             I live in the city of Surabaya, East Java. I have a desire to become a great Software Developer.
           </Text>
-          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-            <Button
-              rounded={'full'}
-              bg={'blue.400'}
-              color={'white'}
-              _hover={{
-                bg: 'blue.500',
-              }}>
-              My First Portofolio
-            </Button>
-            <Button rounded={'full'}>My Second Portofolio</Button>
-          </Stack>
+          <Center>
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+              <Button
+                rounded={'full'}
+                bg={'blue.400'}
+                color={'white'}
+                _hover={{
+                  bg: 'blue.500',
+                }}>
+                My First Portofolio
+              </Button>
+              <Button rounded={'full'}>My Second Portofolio</Button>
+            </Stack>
+          </Center>
         </Stack>
       </Flex>
       <Flex flex={1}>
