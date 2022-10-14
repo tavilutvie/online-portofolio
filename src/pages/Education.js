@@ -154,8 +154,8 @@ const Education = () => {
         <Box marginTop={'50px'}>
           <Carousel />
         </Box>
-        <Heading as="h2" marginTop="10">
-          Past Educations
+        <Heading as="h2" marginTop="20">
+          Past Education
         </Heading>
         <Divider marginTop="5" />
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>

@@ -60,13 +60,11 @@ export default function Navbar() {
                     onClick={isOpen ? onClose : onOpen}
                 />
                 <HStack spacing={8} alignItems={'center'}>
-                    <Box>
-                        <a href="https://www.tavilutvie.dev/"><img className="home"  src="images/home.png" alt="home" /></a>
-                    </Box>
                     <HStack
                     as={'nav'}
                     spacing={4}
                     display={{ base: 'none', md: 'flex' }}>
+                        <a href="https://www.tavilutvie.dev/"><img width={'40px'} className="home"  src="images/home.png" alt="home" /></a>
                         {Links.map((link) => (
                             <NavLink key={link}>{link}</NavLink>
                         ))}
@@ -118,6 +116,7 @@ export default function Navbar() {
                 {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
+                    <a href="https://www.tavilutvie.dev/"><img width={'40px'} className="home"  src="images/home.png" alt="home" /></a>
                         {Links.map((link) => (
                             <NavLink key={link}>{link}</NavLink>
                         ))}

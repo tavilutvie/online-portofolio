@@ -92,16 +92,6 @@ const Contact = () => {
               Year&emsp;: 2017 - 2020
             </Text>
           </Box>
-            <Box flex='1' marginLeft="10">
-              <Box>
-                <p>ppppppppppppp</p>
-            </Box>
-          </Box>
-          <Box flex='1' marginLeft="10">
-            <Box>
-              <p>ppppppppppppp</p>
-            </Box>
-          </Box>
             </Stack>
         </Flex>
         <Flex p={8} flex={1} 
