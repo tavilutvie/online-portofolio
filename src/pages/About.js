@@ -80,7 +80,13 @@ export default function About() {
           </Center>
         </Stack>
       </Flex>
-      <Flex flex={1}>
+      <Flex p={8} flex={1} 
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'} 
+        align={'center'} 
+        justify={'center'}>
         <Image
           borderRadius='full'
           alt={'Profile Picture'}

@@ -158,6 +158,7 @@ const Education = () => {
           Past Educations
         </Heading>
         <Divider marginTop="5" />
+        <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} 
         alignContent={'center'}
         alignSelf={'center'}
@@ -165,37 +166,39 @@ const Education = () => {
         textAlign={'center'} 
         align={'center'} 
         justify={'center'}>
-              <Box flex='1' >
-                <Box borderRadius="lg" overflow="hidden">
-                  <Link href='https://www.sman5surabaya.sch.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                    <Image
-                      boxSize='300px'
-                      transform="scale(1.0)"
-                      src={'images/logo-smala.png'}
-                      alt="smala"
-                      objectFit="contain"
-                      width="100%"
-                      transition="0.3s ease-in-out"
-                      _hover={{
-                        transform: 'scale(1.05)',
-                      }}
-                    />
-                  </Link>
-                </Box>
-                <Heading fontSize="xl" marginTop="2">
-                  <Link href='https://www.sman5surabaya.sch.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                    SMA Negeri 5 Surabaya
-                  </Link>
-                </Heading>
-                <Center>
-                <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
-                </Center>
-                <Text as="p" fontSize="md" marginTop="2">
-                  Major&emsp;: Science
-                  <br></br>
-                  Year&emsp;: 2017 - 2020
-                </Text>
-              </Box>
+            <Stack spacing={6} w={'full'} maxW={'lg'}>
+            <Box flex='1' margin={'30px'}>
+            <Box borderRadius="lg" overflow="hidden">
+              <Link href='https://www.sman5surabaya.sch.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                <Image
+                  boxSize='300px'
+                  transform="scale(1.0)"
+                  src={'images/logo-smala.png'}
+                  alt="smala"
+                  objectFit="contain"
+                  width="100%"
+                  transition="0.3s ease-in-out"
+                  _hover={{
+                    transform: 'scale(1.05)',
+                  }}
+                />
+              </Link>
+            </Box>
+            <Heading fontSize="xl" marginTop="2">
+              <Link href='https://www.sman5surabaya.sch.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                SMA Negeri 5 Surabaya
+              </Link>
+            </Heading>
+            <Center>
+            <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} marginTop="3" />
+            </Center>
+            <Text as="p" fontSize="md" marginTop="2">
+              Major&emsp;: Science
+              <br></br>
+              Year&emsp;: 2017 - 2020
+            </Text>
+          </Box>
+            </Stack>
         </Flex>
         <Flex p={8} flex={1} 
         alignContent={'center'}
@@ -204,7 +207,8 @@ const Education = () => {
         textAlign={'center'} 
         align={'center'} 
         justify={'center'}>
-              <Box flex='1' >
+            <Stack spacing={6} w={'full'} maxW={'lg'}>
+            <Box flex='1' margin={'30px'}>
                 <Box borderRadius="lg" overflow="hidden">
                   <Link href='https://www.smpn1-sby.sch.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     <Image
@@ -233,6 +237,7 @@ const Education = () => {
                   Year&emsp;: 2014 - 2017
                 </Text>
               </Box>
+            </Stack>
         </Flex>
         <Flex p={8} flex={1} 
         alignContent={'center'}
@@ -241,7 +246,8 @@ const Education = () => {
         textAlign={'center'} 
         align={'center'} 
         justify={'center'}>
-              <Box flex='1' >
+            <Stack spacing={6} w={'full'} maxW={'lg'}>
+            <Box flex='1' margin={'30px'}>
                 <Box borderRadius="lg" overflow="hidden">
                   <Link href='https://www.instagram.com/pelitajayaschoolsby/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     <Image
@@ -270,7 +276,9 @@ const Education = () => {
                   Year&emsp;: 2008 - 2014
                 </Text>
               </Box>
+            </Stack>
         </Flex>
+        </Stack>
       </Container>
     );
   };
