@@ -7,6 +7,7 @@ import {
   Heading,
   Text,
   Container,
+  Center,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
@@ -40,47 +41,47 @@ export default function Carousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Design Projects 1',
-      text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'images/its.jpg',
-    },
-    {
-      title: 'Design Projects 2',
-      text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'images/its1.jpg',
-    },
-    {
-      title: 'Design Projects 3',
+      title: 'Institut Teknologi Sepuluh Nopember',
       text:
         "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
       image: 'images/its2.jpg',
     },
     {
-        title: 'Design Projects 1',
-        text:
-          "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-        image: 'images/its3.jpg',
-      },
-      {
-        title: 'Design Projects 2',
-        text:
-          "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-        image: 'images/its4.jpg',
-      },
-      {
-        title: 'Design Projects 3',
-        text:
-          "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-        image: 'images/its5.jpg',
-      },
-      {
-        title: 'Design Projects 3',
-        text:
-          "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-        image: 'images/its6.jpg',
-      },
+      title: 'Bundaran ITS',
+      text:
+        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'images/its22.jpg',
+    },
+    {
+      title: 'Gedung Rektorat ITS',
+      text:
+        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'images/its.jpeg',
+    },
+    {
+      title: 'Graha ITS',
+      text:
+        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'images/its1.jpg',
+    },
+    {
+      title: 'Gedung Departemen Teknik Informatika ITS',
+      text:
+        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'images/its3.jpg',
+    },
+    {
+      title: 'Plaza Prof. Supeno',
+      text:
+        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'images/its4.jpg',
+    },
+    {
+      title: 'Plaza Prof. Supeno',
+      text:
+        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'images/its5.jpg',
+    },
   ];
 
   return (
@@ -144,17 +145,22 @@ export default function Carousel() {
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}
-                w={'full'}
+                w={'max-content'}
                 maxW={'lg'}
                 position="absolute"
-                top="50%"
-                transform="translate(0, -50%)">
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-                  {card.title}
-                </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
-                  {card.text}
-                </Text>
+                top={'85%'}
+                left={'50%'}
+                textAlign="center"
+                transform="translate(-50%, -50%)">
+                  <Center>
+                    <Heading bgColor={'Highlight'} textColor={'navy'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} maxW={'265px'}>
+                      {card.title}
+                    </Heading>
+                    {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                      {card.text}
+                    </Text> */}
+                  </Center>
+                
               </Stack>
             </Container>
           </Box>
