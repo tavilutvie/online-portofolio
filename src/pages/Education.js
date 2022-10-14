@@ -17,10 +17,13 @@ import {
   Flex,
   Center,
   Stack,
+  IconButton,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Carousel from '../components/Carousel';
+import Carousel2 from '../components/Carousel2';
+import { SiLinkedin, SiInstagram, SiTwitter } from 'react-icons/si';
 
 const BlogTags = (props) => {
     return (
@@ -149,6 +152,47 @@ const Education = () => {
               <br></br>
               Year&emsp;: 2020 - Present
             </Text>
+            <Stack direction={{ base: 'column', md: 'row' }}>
+              <Link href="https://www.instagram.com/its_campus/" isExternal>
+                <IconButton
+                  aria-label="instagram"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiInstagram size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+              <Link href="https://www.linkedin.com/school/institutteknologisepuluhnopember/" isExternal>
+                <IconButton
+                  aria-label="linkedin"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiLinkedin size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+              <Link href="https://twitter.com/its_campus" isExternal>
+                <IconButton
+                  aria-label="twitter"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiTwitter size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+            </Stack>
           </Box>
         </Box>
         <Box marginTop={'50px'}>
@@ -197,6 +241,47 @@ const Education = () => {
               <br></br>
               Year&emsp;: 2017 - 2020
             </Text>
+            <Stack align={'center'} justify={'center'} direction={{ base: 'column', md: 'row' }}>
+              <Link href="https://www.instagram.com/mediasmalane/" isExternal>
+                <IconButton
+                  aria-label="instagram"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiInstagram size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+              <Link href="https://www.linkedin.com/school/smanegeri5-surabaya/" isExternal>
+                <IconButton
+                  aria-label="linkedin"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiLinkedin size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+              <Link href="https://twitter.com/MediaSmalane" isExternal>
+                <IconButton
+                  aria-label="twitter"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiTwitter size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+            </Stack>
           </Box>
             </Stack>
         </Flex>
@@ -236,6 +321,34 @@ const Education = () => {
                 <Text as="p" fontSize="md" marginTop="2">
                   Year&emsp;: 2014 - 2017
                 </Text>
+                <Stack align={'center'} justify={'center'} direction={{ base: 'column', md: 'row' }}>
+              <Link href="https://www.instagram.com/spensabaya_official/" isExternal>
+                <IconButton
+                  aria-label="instagram"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiInstagram size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+              <Link href="https://twitter.com/smpn1surabaya" isExternal>
+                <IconButton
+                  aria-label="twitter"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiTwitter size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+            </Stack>
               </Box>
             </Stack>
         </Flex>
@@ -249,7 +362,7 @@ const Education = () => {
             <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Box flex='1' margin={'30px'}>
                 <Box borderRadius="lg" overflow="hidden">
-                  <Link href='https://www.instagram.com/pelitajayaschoolsby/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     <Image
                       boxSize='300px'
                       transform="scale(1.0)"
@@ -265,7 +378,7 @@ const Education = () => {
                   </Link>
                 </Box>
                 <Heading fontSize="xl" marginTop="2">
-                  <Link href='https://www.instagram.com/pelitajayaschoolsby/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                  <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                     Pelita Jaya School
                   </Link>
                 </Heading>
@@ -275,51 +388,28 @@ const Education = () => {
                 <Text as="p" fontSize="md" marginTop="2">
                   Year&emsp;: 2008 - 2014
                 </Text>
+                <Stack align={'center'} justify={'center'} direction={{ base: 'column', md: 'row' }}>
+              <Link href="https://www.instagram.com/pelitajayaschoolsby/" isExternal>
+                <IconButton
+                  aria-label="instagram"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiInstagram size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+            </Stack>
               </Box>
             </Stack>
         </Flex>
         </Stack>
+        <Carousel2 />
       </Container>
     );
   };
   
-  export default Education;
-  
-
-
-
-// const Education = () => {
-//     return (
-        
-        // <div>
-        //     <h1>Education</h1>
-        //     <ul>
-        //         <li>
-        //             <h2>Institut Teknologi Sepuluh Nopember</h2>
-        //             <p>Surabaya, Jawa Timur, Indonesia</p>
-        //             <p>2020 - Present</p>
-        //             <p>Major: Informatics Engineering</p>
-        //             <p>Current GPA: 3.76/4.00</p>
-        //         </li>
-        //         <li>
-        //             <h2>SMAN 5 Surabaya</h2>
-        //             <p>Surabaya, Jawa Timur, Indonesia</p>
-        //             <p>2017 - 2020</p>
-        //             <p>Major: Science</p>
-        //         </li>
-        //         <li>
-        //             <h2>SMPN 1 Surabaya</h2>
-        //             <p>Surabaya, Jawa Timur, Indonesia</p>
-        //             <p>2014 - 2017</p>
-        //         </li>
-        //         <li>
-        //             <h2>Pelita Jaya School</h2>
-        //             <p>Surabaya, Jawa Timur, Indonesia</p>
-        //             <p>2008 - 2014</p>
-        //         </li>
-        //     </ul>
-        // </div>
-//     )
-// }
-
-// export default Education;
+export default Education;
