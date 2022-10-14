@@ -153,7 +153,7 @@ export default function Carousel() {
                 textAlign="center"
                 transform="translate(-50%, -50%)">
                   <Center>
-                    <Heading bgColor={'Highlight'} textColor={'navy'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} maxW={'265px'}>
+                    <Heading bgColor={'Highlight'} textColor={'navy'} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} width={'90%'}>
                       {card.title}
                     </Heading>
                     {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
