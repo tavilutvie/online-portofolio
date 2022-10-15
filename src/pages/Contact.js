@@ -18,12 +18,7 @@ import {
   useBreakpointValue,
   Text,
   Button,
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
   useDisclosure,
-  CloseButton
 } from '@chakra-ui/react';
 import axios from "axios";
 import React, { useState } from "react";
@@ -32,6 +27,8 @@ import { SiGithub, SiLinkedin, SiInstagram } from 'react-icons/si';
 import { MdEmail} from 'react-icons/md';
 import { HiOutlineMail} from 'react-icons/hi';
 import { AiOutlineMobile} from 'react-icons/ai';
+import DisplayAlert from '../components/Alert';
+
 
 const confetti = {
   light: {
@@ -54,48 +51,27 @@ export default function Contact() {
   // const onSubmit = data => console.log(data);
   // console.log(errors);
 
-  const {
-    isOpen: isVisible,
-    onClose,
-    onOpen,
-  } = useDisclosure({ defaultIsOpen: true })
-
+  const { onOpen, } = useDisclosure()
 
   const [inputs, setInputs] = useState({
     email: "",
     subject: "",
     message: "",
   });
+
   const handleOnSubmit = (event) => {
     event.preventDefault();
+    
 
     axios({
       method: "POST",
-      url: "https://formbold.com/s/3pq8o",
+      url: "https://formbold.com/s/3q8o",
       data: inputs,
     })
       .then((r) => {
         console.log("form submitted successfully");
-        alert("form submitted successfully");
-        window.location.reload(false)
-        return ( <Alert status='success'>
-          <AlertIcon />
-          <Box>
-            <AlertTitle>Success!</AlertTitle>
-            <AlertDescription>
-              Your application has been received. We will review your application
-              and respond within the next 48 hours.
-            </AlertDescription>
-          </Box>
-          <CloseButton
-            alignSelf='flex-start'
-            position='relative'
-            right={-1}
-            top={-1}
-            onClick={onClose}
-          />
-        </Alert>)
-
+        alert(<DisplayAlert />);
+        
       })
       .catch((r) => {
         console.log("error");
@@ -225,19 +201,17 @@ export default function Contact() {
                         // {...register("Message")}
                       />
                     </FormControl>
-                    <a href="https://www.tavilutvie.dev/">
                       <Button colorScheme="blue"
                       bg="blue.400"
                       color="white"
                       _hover={{
                         bg: 'blue.500',
                       }}
-                      isFullWidth type="submit" 
-                      onClick={onOpen}>Submit</Button></a>
+                      isFullWidth type="submit"
+                      onClick={onOpen}>Submit</Button>
                   </VStack>
                 </Box>
               </form>
-
 
               <Stack
                 align="center"

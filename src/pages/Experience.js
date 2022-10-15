@@ -15,13 +15,40 @@ import {
     VisuallyHidden,
     List,
     ListItem,
+    useBreakpointValue,
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
   
-  export default function Simple() {
+  export default function Experience() {
     return (
       <Container maxW={'7xl'}>
+        <Heading 
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'} 
+        align={'center'} 
+        justify={'center'}
+        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+            <Text
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: useBreakpointValue({ base: '20%', md: '30%' }),
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: 'blue.400',
+                zIndex: -1,
+              }}>
+              Education
+            </Text>
+            <br></br>
+            <br />{' '}
+          </Heading>
         <SimpleGrid
           columns={{ base: 1, lg: 2 }}
           spacing={{ base: 8, md: 10 }}
