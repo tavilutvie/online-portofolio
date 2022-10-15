@@ -5,7 +5,6 @@ import {
   useBreakpointValue,
   Stack,
   Heading,
-  Text,
   Container,
   Center,
 } from '@chakra-ui/react';
@@ -34,7 +33,7 @@ export default function Carousel() {
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const top = useBreakpointValue({ base: '87%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
   // This list contains all the data for carousels
@@ -87,7 +86,7 @@ export default function Carousel() {
   return (
     <Box
       position={'relative'}
-      height={'600px'}
+      height={'650px'}
       width={'full'}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}

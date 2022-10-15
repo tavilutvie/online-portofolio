@@ -8,12 +8,8 @@ import {
   Divider,
   HStack,
   Tag,
-  Wrap,
-  WrapItem,
-  SpaceProps,
   useColorModeValue,
   Container,
-  VStack,
   Flex,
   Center,
   Stack,
@@ -152,7 +148,7 @@ const Education = () => {
               <br></br>
               Year&emsp;: 2020 - Present
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }}>
+            <Stack direction={{ base: 'row' }}>
               <Link href="https://www.instagram.com/its_campus/" isExternal>
                 <IconButton
                   aria-label="instagram"
@@ -241,7 +237,7 @@ const Education = () => {
               <br></br>
               Year&emsp;: 2017 - 2020
             </Text>
-            <Stack align={'center'} justify={'center'} direction={{ base: 'column', md: 'row' }}>
+            <Stack align={'center'} justify={'center'} direction={{ base: 'row'}}>
               <Link href="https://www.instagram.com/mediasmalane/" isExternal>
                 <IconButton
                   aria-label="instagram"
@@ -321,7 +317,7 @@ const Education = () => {
                 <Text as="p" fontSize="md" marginTop="2">
                   Year&emsp;: 2014 - 2017
                 </Text>
-                <Stack align={'center'} justify={'center'} direction={{ base: 'column', md: 'row' }}>
+                <Stack align={'center'} justify={'center'} direction={{ base: 'row' }}>
               <Link href="https://www.instagram.com/spensabaya_official/" isExternal>
                 <IconButton
                   aria-label="instagram"
@@ -388,7 +384,7 @@ const Education = () => {
                 <Text as="p" fontSize="md" marginTop="2">
                   Year&emsp;: 2008 - 2014
                 </Text>
-                <Stack align={'center'} justify={'center'} direction={{ base: 'column', md: 'row' }}>
+                <Stack align={'center'} justify={'center'} direction={{ base: 'row' }}>
               <Link href="https://www.instagram.com/pelitajayaschoolsby/" isExternal>
                 <IconButton
                   aria-label="instagram"

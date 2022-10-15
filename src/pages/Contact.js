@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Flex,
   FormControl,
   FormLabel,
@@ -17,14 +16,22 @@ import {
   useColorModeValue,
   VStack,
   useBreakpointValue,
-  Text
+  Text,
+  Button,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  useDisclosure,
+  CloseButton
 } from '@chakra-ui/react';
-import React from 'react';
+import axios from "axios";
+import React, { useState } from "react";
 import {BsPerson} from 'react-icons/bs';
 import { SiGithub, SiLinkedin, SiInstagram } from 'react-icons/si';
 import { MdEmail} from 'react-icons/md';
-import {HiOutlineMail} from 'react-icons/hi';
-import { useForm } from 'react-hook-form';
+import { HiOutlineMail} from 'react-icons/hi';
+import { AiOutlineMobile} from 'react-icons/ai';
 
 const confetti = {
   light: {
@@ -43,9 +50,65 @@ const CONFETTI_DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2
 
 export default function Contact() {
   const { hasCopied, onCopy } = useClipboard('tavirazin@gmail.com');
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(errors);
+  // const { register, handleSubmit, formState: { errors } } = useForm();
+  // const onSubmit = data => console.log(data);
+  // console.log(errors);
+
+  const {
+    isOpen: isVisible,
+    onClose,
+    onOpen,
+  } = useDisclosure({ defaultIsOpen: true })
+
+
+  const [inputs, setInputs] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+
+    axios({
+      method: "POST",
+      url: "https://formbold.com/s/3pq8o",
+      data: inputs,
+    })
+      .then((r) => {
+        console.log("form submitted successfully");
+        alert("form submitted successfully");
+        window.location.reload(false)
+        return ( <Alert status='success'>
+          <AlertIcon />
+          <Box>
+            <AlertTitle>Success!</AlertTitle>
+            <AlertDescription>
+              Your application has been received. We will review your application
+              and respond within the next 48 hours.
+            </AlertDescription>
+          </Box>
+          <CloseButton
+            alignSelf='flex-start'
+            position='relative'
+            right={-1}
+            top={-1}
+            onClick={onClose}
+          />
+        </Alert>)
+
+      })
+      .catch((r) => {
+        console.log("error");
+      });
+  };
+  
+  const handleOnChange = (event) => {
+    event.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [event.target.id]: event.target.value,
+    }));
+  };
 
   return (
     <Flex
@@ -89,10 +152,93 @@ export default function Contact() {
             <br></br>
             <br />{' '}
           </Heading>
-
             <Stack
               spacing={{ base: 4, md: 8, lg: 20 }}
               direction={{ base: 'column', md: 'row' }}>
+              <form onSubmit={handleOnSubmit}>
+                <Box
+                  bg={useColorModeValue('white', 'gray.700')}
+                  borderRadius="lg"
+                  p={8}
+                  color={useColorModeValue('gray.700', 'whiteAlpha.900')}
+                  shadow="base">
+                  <VStack spacing={5}>
+                    <FormControl isRequired>
+                      <FormLabel>Name</FormLabel>
+
+                      <InputGroup>
+                        <InputLeftElement children={<BsPerson />} />
+                        <Input 
+                          id="subject"
+                          type="text" 
+                          name="name" 
+                          placeholder="Your Name" 
+                          onChange={handleOnChange}
+                          value={inputs.subject}
+                          // {...register("Name", {required: true, maxLength: 80})}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel>Email</FormLabel>
+
+                      <InputGroup>
+                        <InputLeftElement children={<HiOutlineMail />} />
+                        <Input
+                          id="email"
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          onChange={handleOnChange}
+                          value={inputs.email}
+                          // {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel>Number</FormLabel>
+
+                      <InputGroup>
+                        <InputLeftElement children={<AiOutlineMobile />} />
+                        <Input
+                          type="tel"
+                          name="Mobile Number"
+                          placeholder="Your Mobile Number"
+                          // {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel>Message</FormLabel>
+
+                      <Textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your Message"
+                        rows={6}
+                        resize="none"
+                        onChange={handleOnChange}
+                        value={inputs.message}
+                        // {...register("Message")}
+                      />
+                    </FormControl>
+                    <a href="https://www.tavilutvie.dev/">
+                      <Button colorScheme="blue"
+                      bg="blue.400"
+                      color="white"
+                      _hover={{
+                        bg: 'blue.500',
+                      }}
+                      isFullWidth type="submit" 
+                      onClick={onOpen}>Submit</Button></a>
+                  </VStack>
+                </Box>
+              </form>
+
+
               <Stack
                 align="center"
                 justify="space-around"
@@ -159,56 +305,6 @@ export default function Contact() {
                   />
                 </Link>
               </Stack>
-              <form onSubmit={handleSubmit(onSubmit)}>
-              <Box
-                bg={useColorModeValue('white', 'gray.700')}
-                borderRadius="lg"
-                p={8}
-                color={useColorModeValue('gray.700', 'whiteAlpha.900')}
-                shadow="base">
-                <VStack spacing={5}>
-                  <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<BsPerson />} />
-                      <Input type="text" name="name" placeholder="Your Name" />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Email</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<HiOutlineMail />} />
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Message</FormLabel>
-
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={6}
-                      resize="none"
-                    />
-                  </FormControl>
-                  <Input colorScheme="blue"
-                    bg="blue.400"
-                    color="white"
-                    _hover={{
-                      bg: 'blue.500',
-                    }}
-                    isFullWidth type="submit" />
-                </VStack>
-              </Box>
-              </form>
             </Stack>
           </VStack>
         </Box>

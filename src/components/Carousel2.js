@@ -5,7 +5,6 @@ import {
   useBreakpointValue,
   Stack,
   Heading,
-  Text,
   Container,
   Center,
 } from '@chakra-ui/react';
@@ -34,14 +33,14 @@ export default function Carousel() {
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const top = useBreakpointValue({ base: '83%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'SMA Negri 5 Surabaya',
+      title: 'SMA Negeri 5 Surabaya',
       text:
         "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
       image: 'images/smala.jpg',
@@ -63,9 +62,11 @@ export default function Carousel() {
   return (
     <Box
       position={'relative'}
-      height={'600px'}
-      width={'full'}
-      overflow={'hidden'}>
+      height={'350px'}
+      width='70%'
+      overflow={'hidden'}
+      mx='auto'
+      >
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -111,20 +112,20 @@ export default function Carousel() {
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            backgroundSize="50%"
+            backgroundSize='contain'
             boxSize='full'
             transform="scale(1.0)"
             objectFit="contain"
             width="100%"
             backgroundImage={`url(${card.image})`}>
             {/* This is the block you need to change, to customize the caption */}
-            <Container size="container.lg" height="600px" position="relative">
+            <Container size="container.lg" height="300px" position="relative">
               <Stack
                 spacing={6}
                 w={'max-content'}
                 maxW={'lg'}
                 position="absolute"
-                top={'75%'}
+                top={'80%'}
                 left={'50%'}
                 textAlign="center"
                 transform="translate(-50%, -50%)">
@@ -136,7 +137,6 @@ export default function Carousel() {
                       {card.text}
                     </Text> */}
                   </Center>
-                
               </Stack>
             </Container>
           </Box>

@@ -1,18 +1,5 @@
 import './About.css';
 import {
-  Box,
-  Avatar,
-  HStack,
-  Link,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  useColorMode,
   Center,
   Button,
   Flex,
@@ -23,7 +10,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 
-import React, { Component } from 'react';
+import React from 'react';
 export default function About() {
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
