@@ -23,10 +23,13 @@ import { SiLinkedin, SiInstagram, SiTwitter } from 'react-icons/si';
 
 const BlogTags = (props) => {
     return (
-      <HStack spacing={2} marginTop={props.marginTop}>
+      <HStack 
+        spacing={2} 
+        marginTop={props.marginTop}
+        >
         {props.tags.map((tag) => {
           return (
-            <Tag size={'md'} variant="solid" colorScheme="orange" key={tag}>
+            <Tag size={'md'} objectFit="contain" width={'max-content'} height={'max-content'} variant={'solid'} colorScheme="orange" key={tag}>
               {tag}
             </Tag>
           );

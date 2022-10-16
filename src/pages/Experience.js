@@ -1,290 +1,441 @@
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
     Box,
-    chakra,
     Container,
     Stack,
     Text,
     Image,
     Flex,
-    VStack,
-    Button,
     Heading,
     SimpleGrid,
     StackDivider,
     useColorModeValue,
-    VisuallyHidden,
-    List,
-    ListItem,
     useBreakpointValue,
-  } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-  import { MdLocalShipping } from 'react-icons/md';
-  
-  export default function Experience() {
-    return (
-      <Container maxW={'7xl'}>
-        <Heading 
-        alignContent={'center'}
-        alignSelf={'center'}
-        alignItems={'center'}
-        textAlign={'center'} 
-        align={'center'} 
-        justify={'center'}
-        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: useBreakpointValue({ base: '20%', md: '30%' }),
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'blue.400',
-                zIndex: -1,
-              }}>
-              Education
-            </Text>
-            <br></br>
-            <br />{' '}
-          </Heading>
-        <SimpleGrid
-          columns={{ base: 1, lg: 2 }}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 18, md: 24 }}>
-          <Flex>
+    Divider,
+    Link,
+    HStack,
+    Tag,
+    IconButton,
+} from '@chakra-ui/react';
+import { SiInstagram, SiTwitter } from 'react-icons/si';
+
+const BlogTags = (props) => {
+  return (
+    <HStack
+      alignContent={'center'}
+      alignSelf={'center'}
+      alignItems={'center'}
+      textAlign={'center'} 
+      align={'center'} 
+      justify={'center'}
+      spacing={2} 
+      marginTop={props.marginTop}>
+      {props.tags.map((tag) => {
+        return (
+          <Tag 
+          objectFit="contain" 
+          width={'max-content'} 
+          height={'max-content'}
+          size={'md'} 
+          variant="solid" 
+          colorScheme="orange" 
+          key={tag}>
+            {tag}
+          </Tag>
+        );
+      })}
+    </HStack>
+  );
+};
+
+export default function Experience() {
+  return (
+    <Container maxW={'7xl'}>
+      <Heading 
+      alignContent={'center'}
+      alignSelf={'center'}
+      alignItems={'center'}
+      textAlign={'center'} 
+      align={'center'} 
+      justify={'center'}
+      fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+        <Text
+          as={'span'}
+          position={'relative'}
+          _after={{
+            content: "''",
+            width: 'full',
+            height: useBreakpointValue({ base: '20%', md: '30%' }),
+            position: 'absolute',
+            bottom: 1,
+            left: 0,
+            bg: 'blue.400',
+            zIndex: -1,
+          }}>
+          Experience
+        </Text>
+        <br></br>
+        <br />{' '}
+      </Heading>
+      <Heading as="h2" marginTop="5">
+        Comitee Experience
+      </Heading>
+      <Divider marginTop="5" />
+      <SimpleGrid
+        columns={{ base: 1, lg: 2 }}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 18, md: 24 }}
+        mb={'90px'}
+        >
+        <Flex>
+          <Box
+            flex="1"
+            flexDirection="column"
+            justifyContent="center"
+            marginTop={{ base: '0', sm: '0', lg: '-10' }}
+            textAlign={{ base: 'center'}}
+            >
             <Image
               rounded={'md'}
               alt={'product image'}
-              src={
-                'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
-              }
-              fit={'cover'}
+              src={'images/reeva.jpg'}
+              fit={'contain'}
               align={'center'}
               w={'100%'}
-              h={{ base: '100%', sm: '400px', lg: '500px' }}
+              h={{ base: '100%', sm: '150px', lg: '250px' }}
             />
-          </Flex>
-          <Stack spacing={{ base: 6, md: 10 }}>
-            <Box as={'header'}>
-              <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                Automatic Watch
-              </Heading>
+            <br></br>
+            <Heading marginTop="1">
+              <Link href='https://schematics.its.ac.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                Schematics ITS <ExternalLinkIcon mx='3px' boxSize={'20px'} />
+              </Link>
+            </Heading>
+            <br></br>
+            <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
+            <Stack 
+              alignContent={'center'}
+              alignSelf={'center'}
+              alignItems={'center'}
+              textAlign={'center'} 
+              align={'center'} 
+              justify={'center'} 
+              marginTop={'10px'} 
+              direction={{ base: 'row' }}>
+              <Link href="https://www.instagram.com/schematics.its/" isExternal>
+                <IconButton
+                  aria-label="instagram"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiInstagram size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+              <Link href="https://twitter.com/schematics_its" isExternal>
+                <IconButton
+                  aria-label="twitter"
+                  variant="ghost"
+                  size="lg"
+                  icon={<SiTwitter size="28px" />}
+                  _hover={{
+                    bg: 'blue.500',
+                    color: useColorModeValue('white', 'gray.700'),
+                  }}
+                  isRound
+                />
+              </Link>
+            </Stack>
+            
+          </Box>
+        </Flex>
+        <Stack spacing={{ base: 6, md: 10 }}>
+          <Box as={'header'}>
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: 'xl', sm: '3xl', lg: '4xl' }}>
+              Schematics REEVA
+            </Heading>
+          </Box>
+
+          <Stack
+            spacing={{ base: 4, sm: 6 }}
+            direction={'column'}
+            divider={
+              <StackDivider
+                borderColor={useColorModeValue('gray.200', 'gray.600')}
+              />
+            }>
+            <Text
+              fontSize={{ base: '19px', lg: '21px' }}
+              color={useColorModeValue('yellow.500', 'yellow.300')}
+              fontWeight={'500'}
+              textTransform={'uppercase'}
+              mb={'4'}>
+              Work Section
+            </Text>
+            
+            <Box>
+              <Text
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                mb={'2'}>
+                Recording Staff
+              </Text>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontWeight={300}
-                fontSize={'2xl'}>
-                $350.00 USD
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={'1'}>
+                Mei 2021 - October 2021
               </Text>
-            </Box>
-  
-            <Stack
-              spacing={{ base: 4, sm: 6 }}
-              direction={'column'}
-              divider={
-                <StackDivider
-                  borderColor={useColorModeValue('gray.200', 'gray.600')}
-                />
-              }>
-              <VStack spacing={{ base: 4, sm: 6 }}>
-                <Text
-                  color={useColorModeValue('gray.500', 'gray.400')}
-                  fontSize={'2xl'}
-                  fontWeight={'300'}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore
-                </Text>
-                <Text fontSize={'lg'}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                  aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                  maxime modi nam officiis porro, quae, quisquam quos
-                  reprehenderit velit? Natus, totam.
-                </Text>
-              </VStack>
-              {/* <Box>
-                <Text
-                  fontSize={{ base: '16px', lg: '18px' }}
-                  color={useColorModeValue('yellow.500', 'yellow.300')}
-                  fontWeight={'500'}
-                  textTransform={'uppercase'}
-                  mb={'4'}>
-                  Features
-                </Text>
-  
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                  <List spacing={2}>
-                    <ListItem>Chronograph</ListItem>
-                    <ListItem>Master Chronometer Certified</ListItem>{' '}
-                    <ListItem>Tachymeter</ListItem>
-                  </List>
-                  <List spacing={2}>
-                    <ListItem>Anti‑magnetic</ListItem>
-                    <ListItem>Chronometer</ListItem>
-                    <ListItem>Small seconds</ListItem>
-                  </List>
-                </SimpleGrid>
-              </Box> */}
-              <Box>
-                <Text
-                  fontSize={{ base: '16px', lg: '18px' }}
-                  color={useColorModeValue('yellow.500', 'yellow.300')}
-                  fontWeight={'500'}
-                  textTransform={'uppercase'}
-                  mb={'4'}>
-                  Product Details
-                </Text>
-  
-                <List spacing={2}>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Between lugs:
-                    </Text>{' '}
-                    20 mm
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Bracelet:
-                    </Text>{' '}
-                    leather strap
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Case:
-                    </Text>{' '}
-                    Steel
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Case diameter:
-                    </Text>{' '}
-                    42 mm
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Dial color:
-                    </Text>{' '}
-                    Black
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Crystal:
-                    </Text>{' '}
-                    Domed, scratch‑resistant sapphire crystal with anti‑reflective
-                    treatment inside
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Water resistance:
-                    </Text>{' '}
-                    5 bar (50 metres / 167 feet){' '}
-                  </ListItem>
-                </List>
+              <Text fontSize={'md'}>
+                Responsible for preparing drafted footage in Schematics Reeva.
+              </Text>
               </Box>
-            </Stack>
-  
-            <Button
-              rounded={'none'}
-              w={'full'}
-              mt={8}
-              size={'lg'}
-              py={'7'}
-              bg={useColorModeValue('gray.900', 'gray.50')}
-              color={useColorModeValue('white', 'gray.900')}
-              textTransform={'uppercase'}
-              _hover={{
-                transform: 'translateY(2px)',
-                boxShadow: 'lg',
-              }}>
-              Add to cart
-            </Button>
-  
-            <Stack direction="row" alignItems="center" justifyContent={'center'}>
-              <MdLocalShipping />
-              <Text>2-3 business days delivery</Text>
-            </Stack>
+              <Box>
+              <Text
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                mb={'2'}>
+                Production Staff
+              </Text>
+              <Text
+                color={useColorModeValue('gray.900', 'gray.400')}
+                fontWeight={300}
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={'1'}>
+                March 2022 - November 2022
+              </Text>
+              <Text fontSize={'md'}>
+                Responsible for preparing things related to Schematics Reeva event production.
+              </Text>
+              </Box>
           </Stack>
-        </SimpleGrid>
-      </Container>
-    );
-  }
 
+        </Stack>
+      </SimpleGrid>
+      <Divider marginTop="5" />
+      <SimpleGrid
+        columns={{ base: 1, lg: 2 }}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 18, md: 24 }}
+        mb={'90px'}
+        >
+        <Flex>
+          <Box
+            flex="1"
+            flexDirection="column"
+            justifyContent="center"
+            marginTop={{ base: '0', sm: '0', lg: '-10' }}
+            textAlign={{ base: 'center'}}
+            >
+            <br></br>
+            <Heading marginTop="1">
+              <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                Nouveau SMAN 5 Surabaya
+              </Link>
+            </Heading>
+            <br></br>
+            <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
 
+          </Box>
+        </Flex>
+        <Stack spacing={{ base: 6, md: 10 }}>
+          <Stack
+            spacing={{ base: 4, sm: 6 }}
+            direction={'column'}
+            divider={
+              <StackDivider
+                borderColor={useColorModeValue('gray.200', 'gray.600')}
+              />
+            }>
+            <Text
+              fontSize={{ base: '19px', lg: '21px' }}
+              color={useColorModeValue('yellow.500', 'yellow.300')}
+              fontWeight={'500'}
+              textTransform={'uppercase'}
+              mb={'4'}>
+              Work Section
+            </Text>
+            
+            <Box>
+              <Text
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                mb={'2'}>
+                Property Staff 
+              </Text>
+              <Text
+                color={useColorModeValue('gray.900', 'gray.400')}
+                fontWeight={300}
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={'1'}>
+                2017
+              </Text>
+              <Text fontSize={'md'}>
+                Responsible for preparing and supplying Nouveau event equipments and needs.</Text>
+              </Box>
+              <Box>
+              <Text
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                mb={'2'}>
+                Transportation Staff
+              </Text>
+              <Text
+                color={useColorModeValue('gray.900', 'gray.400')}
+                fontWeight={300}
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={'1'}>
+                2018
+              </Text>
+              <Text fontSize={'md'}>
+                Responsible for setting up vehicles and providing transportation needs for Nouveau event.</Text>
+              </Box>
+          </Stack>
 
+        </Stack>
+      </SimpleGrid>
 
+      <SimpleGrid
+        columns={{ base: 1, lg: 2 }}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 18, md: 24 }}
+        mb={'90px'}
+        >
+        <Flex>
+          <Box
+            flex="1"
+            flexDirection="column"
+            justifyContent="center"
+            marginTop={{ base: '0', sm: '0', lg: '-10' }}
+            textAlign={{ base: 'center'}}
+            >
+            <br></br>
+            <Heading marginTop="1">
+              <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                Eunoia SMAN 5 Surabaya
+              </Link>
+            </Heading>
+            <br></br>
+            <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
 
-// // const Experience = () => {
-// //     return (
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//         // <div>
-//         //     <h1>Experience</h1>
-//         //     <h2>Comitee Experience</h2>
-//         //     <ul>
-//         //         <li>
-//         //             <h3>Schematics ITS </h3>
-//         //             <p>Surabaya, Jawa Timur, Indonesia</p>
-//         //             <br></br>
-//         //             <ul>
-//         //             <li>
-//         //             <p>Recording Staff (Mei 2021 - October 2021)</p>
-//         //             <p>Responsible for preparing drafted footage in Schematics Reeva.</p>
-//         //             </li>
-//         //             </ul>
-//         //         </li>
-//         //         <li>
-//         //             <h3>Senyuman SMAN 5 Surabaya</h3>
-//         //             <p>Surabaya, Jawa Timur, Indonesia</p>
-//         //             <br></br>
-//         //             <ul>
-//         //         <li>
-//         //             <p>Property Staff (2017—2018)</p>
-//         //             <p>Responsible for preparing and supplying Senyuman event equipments and needs.</p>
-//         //             </li>
-//         //             </ul>
-//         //         </li>
-//         //         <li>
-//         //             <h3>Nouveau SMAN 5 Surabaya</h3>
-//         //             <p>Surabaya, Jawa Timur, Indonesia</p>
-//         //             <br></br>
-//         //             <ul>
-//         //         <li>
-//         //             <p>Property Staff (2017—2018)</p>
-//         //             <p>Responsible for preparing and supplying Nouveau event equipments and needs.</p>
-//         //             <br></br>
-//         //             </li>
-//         //         <li>
-//         //             <p>Transportation Staff (2018—2019)</p>
-//         //             <p>Responsible for setting up vehicles and providing transportation needs for Nouveau events.</p>
-//         //             </li>
-//         //             </ul>
-//         //         </li>
-//         //         <li>
-//         //             <h3>Eunoia SMAN 5 Surabaya</h3>
-//         //             <p>Surabaya, Jawa Timur, Indonesia</p>
-//         //             <br></br>
-//         //             <ul>
-//         //         <li>
-//         //             <p>Robotics Event Staff (2018—2019)</p>
-//         //             <p>Responsible for designing and organizing Robotics competition events in Eunoia.</p>
-//         //             </li>
-//         //             </ul>
-//         //         </li>
-//         //     </ul>
-//         // </div>
-//     )
-// }
+          </Box>
+        </Flex>
+        <Stack spacing={{ base: 6, md: 10 }}>
+          <Stack
+            spacing={{ base: 4, sm: 6 }}
+            direction={'column'}
+            divider={
+              <StackDivider
+                borderColor={useColorModeValue('gray.200', 'gray.600')}
+              />
+            }>
+            <Text
+              fontSize={{ base: '19px', lg: '21px' }}
+              color={useColorModeValue('yellow.500', 'yellow.300')}
+              fontWeight={'500'}
+              textTransform={'uppercase'}
+              mb={'4'}>
+              Work Section
+            </Text>
+            
+            <Box>
+              <Text
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                mb={'2'}>
+                Robotics Event Staff  
+              </Text>
+              <Text
+                color={useColorModeValue('gray.900', 'gray.400')}
+                fontWeight={300}
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={'1'}>
+                2018
+              </Text>
+              <Text fontSize={'md'}>
+              Responsible for designing and organizing Robotics competition events in Eunoia.</Text>
+              </Box>
+          </Stack>
 
-// export default Experience;
+        </Stack>
+      </SimpleGrid>
+
+      <SimpleGrid
+        columns={{ base: 1, lg: 2 }}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 18, md: 24 }}
+        mb={'90px'}
+        >
+        <Flex>
+          <Box
+            flex="1"
+            flexDirection="column"
+            justifyContent="center"
+            marginTop={{ base: '0', sm: '0', lg: '-10' }}
+            textAlign={{ base: 'center'}}
+            >
+            <br></br>
+            <Heading marginTop="1">
+              <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                Senyuman SMAN 5 Surabaya
+              </Link>
+            </Heading>
+            <br></br>
+            <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
+
+          </Box>
+        </Flex>
+        <Stack spacing={{ base: 6, md: 10 }}>
+          <Stack
+            spacing={{ base: 4, sm: 6 }}
+            direction={'column'}
+            divider={
+              <StackDivider
+                borderColor={useColorModeValue('gray.200', 'gray.600')}
+              />
+            }>
+            <Text
+              fontSize={{ base: '19px', lg: '21px' }}
+              color={useColorModeValue('yellow.500', 'yellow.300')}
+              fontWeight={'500'}
+              textTransform={'uppercase'}
+              mb={'4'}>
+              Work Section
+            </Text>
+            
+            <Box>
+              <Text
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                mb={'2'}>
+                Property Staff 
+              </Text>
+              <Text
+                color={useColorModeValue('gray.900', 'gray.400')}
+                fontWeight={300}
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={'1'}>
+                2018
+              </Text>
+              <Text fontSize={'md'}>
+                Responsible for preparing and supplying Senyuman event equipments and needs.</Text>
+              </Box>
+          </Stack>
+
+        </Stack>
+      </SimpleGrid>
+    </Container>
+  );
+}
