@@ -71,7 +71,6 @@ export default function Contact() {
       .then((r) => {
         console.log("form submitted successfully");
         alert(<DisplayAlert />);
-        
       })
       .catch((r) => {
         console.log("error");
@@ -97,7 +96,7 @@ export default function Contact() {
       }}
       id="contact">
       <Box
-      width={{ base: 'full', md: '1000px' }}
+      // width={{ base: 'full', md: 'auto' }}
         borderRadius="lg"
         m={{ base: 5, md: 16, lg: 10 }}
         p={{ base: 5, lg: 16 }}>
