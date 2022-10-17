@@ -6,12 +6,39 @@ import {
     Heading,
     SimpleGrid,
     useColorModeValue,
+    useBreakpointValue,
 } from '@chakra-ui/react';
 import Carousel3 from '../components/Carousel3';
   
   export default function Simple() {
     return (
       <Container maxW={'7xl'}>
+        <Heading 
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'} 
+        align={'center'} 
+        justify={'center'}
+        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+            <Text
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: useBreakpointValue({ base: '20%', md: '30%' }),
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: 'blue.400',
+                zIndex: -1,
+              }}>
+              Awards
+            </Text>
+            <br></br>
+            <br />{' '}
+          </Heading>
         <SimpleGrid
             spacing={{ base: 8, md: 10 }}
             py={{ base: 18, md: 24 }}>
