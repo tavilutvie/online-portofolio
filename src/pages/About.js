@@ -75,9 +75,12 @@ export default function About() {
         align={'center'} 
         justify={'center'}>
         <Image
-          borderRadius='full'
+          borderTopRadius={'full'}
           alt={'Profile Picture'}
           objectFit={'cover'}
+          // width={'max-content'} 
+          // height={'max-content'}
+          boxSize="80%"
           src={'images/foto.jpg'}
         />
       </Flex>
