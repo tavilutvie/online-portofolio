@@ -126,6 +126,7 @@ const Education = () => {
             </Box>
           </Box>
           <Box
+            textAlign={'center'}
             display="flex"
             flex="1"
             flexDirection="column"
@@ -137,9 +138,9 @@ const Education = () => {
               </Link>
             </Heading>
             <br></br>
-            
-            <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
-           
+            <Center>
+              <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
+            </Center>
             <Text
               as="p"
               marginTop="2"
@@ -154,7 +155,14 @@ const Education = () => {
               <br></br>
               Year&emsp;: 2020 - Present
             </Text>
-            <Stack direction={{ base: 'row' }}>
+            <Stack 
+            alignContent={'center'}
+            alignSelf={'center'}
+            alignItems={'center'}
+            textAlign={'center'} 
+            align={'center'} 
+            justify={'center'}  
+            direction={{ base: 'row' }}>
               <Link href="https://www.instagram.com/its_campus/" isExternal>
                 <IconButton
                   aria-label="instagram"

@@ -4,9 +4,7 @@ import {
   IconButton,
   useBreakpointValue,
   Stack,
-  Heading,
   Container,
-  Center,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
