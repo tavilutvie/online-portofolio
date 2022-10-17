@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Icon, Text, Stack, Flex, List, ListItem, ListIcon } from '@chakra-ui/react';
+import { Box, SimpleGrid, Icon, Text, Stack, Flex, List, ListItem, ListIcon, Container, Heading, useBreakpointValue } from '@chakra-ui/react';
 import { GiPsychicWaves } from 'react-icons/gi';
 import { MdCheckCircle, MdComputer, MdLanguage } from 'react-icons/md';
 
@@ -8,7 +8,11 @@ const Feature = ({ title, text, icon }) => {
       <Flex
         w={16}
         h={16}
-        align={'center'}
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'} 
+        align={'center'} 
         justify={'center'}
         color={'white'}
         rounded={'full'}
@@ -17,16 +21,42 @@ const Feature = ({ title, text, icon }) => {
         mb={1}>
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Text textAlign={'center'} fontWeight={600}>{title}</Text>
+      <Text textAlign={'center'} color={'gray.600'}>{text}</Text>
     </Stack>
   );
 };
 
 export default function Skills() {
   return (
-    <Box p={4} paddingLeft={'25px'} marginLeft={'25px'}
-    >
+    <Container maxW={'7xl'}>
+    <Heading 
+      alignContent={'center'}
+      alignSelf={'center'}
+      alignItems={'center'}
+      textAlign={'center'} 
+      align={'center'} 
+      justify={'center'}
+      fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+        <Text
+          as={'span'}
+          position={'relative'}
+          _after={{
+            content: "''",
+            width: 'full',
+            height: useBreakpointValue({ base: '20%', md: '30%' }),
+            position: 'absolute',
+            bottom: 1,
+            left: 0,
+            bg: 'blue.400',
+            zIndex: -1,
+          }}>
+          Skills
+        </Text>
+        <br></br>
+        <br />{' '}
+      </Heading>
+    <Box p={4} paddingLeft={'50px'} >
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Box>
         <Feature
@@ -36,7 +66,7 @@ export default function Skills() {
             'System of notation for writing computer programs.'
           }
         />
-        <List spacing={'3'}>
+        <List marginTop={'5%'} marginLeft={'37%'} spacing={'3'}>
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
                 C
@@ -75,7 +105,7 @@ export default function Skills() {
             'Qualities needed to be able to perform certain behaviors.'
           }
         />
-        <List spacing={'3'}>
+        <List marginTop={'5%'} marginLeft={'37%'} spacing={'3'}>
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
                 Teamwork
@@ -126,7 +156,7 @@ export default function Skills() {
             ' Ability to speak a language.'
           }
         />
-        <List spacing={'3'}>
+        <List marginTop={'5%'} marginLeft={'37%'} spacing={'3'}>
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
                 English
@@ -139,5 +169,6 @@ export default function Skills() {
         </Box>
       </SimpleGrid>
     </Box>
+    </Container>
   );
 }
