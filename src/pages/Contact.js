@@ -97,6 +97,7 @@ export default function Contact() {
       }}
       id="contact">
       <Box
+      width={{ base: 'full', md: '1000px' }}
         borderRadius="lg"
         m={{ base: 5, md: 16, lg: 10 }}
         p={{ base: 5, lg: 16 }}>
@@ -133,6 +134,8 @@ export default function Contact() {
               direction={{ base: 'column', md: 'row' }}>
               <form onSubmit={handleOnSubmit}>
                 <Box
+                // width={{ base: 'full', md: 'auto' }}
+                  // display="flex"
                   bg={useColorModeValue('white', 'gray.700')}
                   borderRadius="lg"
                   p={8}

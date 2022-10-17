@@ -92,6 +92,7 @@ const Education = () => {
           display="flex"
           flexDirection={{ base: 'column', sm: 'row' }}
           justifyContent="space-between">
+          <Stack direction={{ base: 'column', md: 'row' }}>
           <Box
             display="flex"
             flex="1"
@@ -128,7 +129,7 @@ const Education = () => {
             display="flex"
             flex="1"
             flexDirection="column"
-            justifyContent="center"
+            justifyContent="center" 
             marginTop={{ base: '3', sm: '0' }}>
             <Heading marginTop="1">
               <Link href='https://www.its.ac.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
@@ -136,7 +137,9 @@ const Education = () => {
               </Link>
             </Heading>
             <br></br>
+            
             <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
+           
             <Text
               as="p"
               marginTop="2"
@@ -193,6 +196,7 @@ const Education = () => {
               </Link>
             </Stack>
           </Box>
+          </Stack>
         </Box>
         <Box marginTop={'50px'}>
           <Carousel />
