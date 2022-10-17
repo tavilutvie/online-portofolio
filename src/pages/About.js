@@ -8,6 +8,7 @@ import {
   Stack,
   Text,
   useBreakpointValue,
+  Link,
 } from '@chakra-ui/react';
 
 import React from 'react';
@@ -53,16 +54,28 @@ export default function About() {
           </Text>
           <Center>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-              <Button
-                rounded={'full'}
-                bg={'blue.400'}
-                color={'white'}
-                _hover={{
-                  bg: 'blue.500',
-                }}>
-                My First Portofolio
-              </Button>
-              <Button rounded={'full'}>My Second Portofolio</Button>
+              <Link href="/" isExternal>
+                <Button
+                  rounded={'full'}
+                  bg={'blue.400'}
+                  color={'white'}
+                  _hover={{
+                    bg: 'blue.500',
+                  }}>
+                  My Primary Portofolio
+                </Button>
+              </Link>
+              <Link href="https://sop.tavilutvie.dev/" isExternal>
+                <Button
+                  rounded={'full'}
+                  bg={'purple.400'}
+                  color={'white'}
+                  _hover={{
+                    bg: 'purple.500',
+                  }}>
+                  My Secondary Portofolio
+                </Button>
+              </Link>
             </Stack>
           </Center>
         </Stack>

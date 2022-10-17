@@ -36,7 +36,7 @@ import {
                 click the buttons below to see more about me
             </Text>
             <Stack direction={'row'}>
-            <a href="https://www.tavilutvie.dev/about">
+            <a href="about">
                 <Button
                     bg={'blue.400'}
                     rounded={'full'}
