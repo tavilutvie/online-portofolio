@@ -50,7 +50,7 @@ export default function About() {
             <br></br><br></br>
             My name is Eldenabih Tavirazin Lutvie from the Department of Informatics Engineering, Sepuluh Nopember Institute of Technology. 
             <br></br>
-            I live in the city of Surabaya, East Java. I have a desire to become a great Software Developer.
+            I live in the city of Surabaya, East Java. I have a desire to become a great Software Developer. I'm currently interested in learning back-end programming and becoming a full stack web developer.
           </Text>
           <Center>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>

@@ -95,6 +95,18 @@ export default function Skills() {
                 <ListIcon as={MdCheckCircle} color='green.500' />
                 CSS
             </ListItem>
+            <ListItem>
+                <ListIcon as={MdCheckCircle} color='green.500' />
+                SQL
+            </ListItem>
+            <ListItem>
+                <ListIcon as={MdCheckCircle} color='green.500' />
+                React
+            </ListItem>
+            <ListItem>
+                <ListIcon as={MdCheckCircle} color='green.500' />
+                React Native
+            </ListItem>
         </List>
         </Box>
         <Box>
