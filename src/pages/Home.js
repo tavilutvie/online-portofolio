@@ -42,7 +42,7 @@ import {
                     rounded={'full'}
                     color={'white'}
                     _hover={{ bg: 'blue.500' }}>
-                    Show me more
+                    Show more
                 </Button>
             </a>
               
