@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import Carousel3 from '../components/Carousel3';
   
-  export default function Simple() {
+  export default function Awards() {
     return (
       <Container maxW={'7xl'}>
         <Heading 
