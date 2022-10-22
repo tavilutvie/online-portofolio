@@ -45,7 +45,6 @@ import {
                     Show more
                 </Button>
             </a>
-              
             </Stack>
           </Stack>
         </VStack>
