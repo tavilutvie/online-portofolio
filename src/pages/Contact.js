@@ -65,7 +65,7 @@ export default function Contact() {
 
     axios({
       method: "POST",
-      url: "https://formbold.com/s/3q8o",
+      url: "https://formbold.com/s/oz2qo",
       data: inputs,
     })
       .then((r) => {
