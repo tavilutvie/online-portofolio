@@ -1,6 +1,6 @@
 import { Box, SimpleGrid, Icon, Text, Stack, Flex, List, ListItem, ListIcon, Container, Heading, useBreakpointValue } from '@chakra-ui/react';
-import { GiPsychicWaves } from 'react-icons/gi';
-import { MdCheckCircle, MdComputer, MdLanguage } from 'react-icons/md';
+import { GiAwareness } from 'react-icons/gi';
+import { MdComputer, MdLanguage } from 'react-icons/md';
 
 const Feature = ({ title, text, icon }) => {
   return (
@@ -14,7 +14,7 @@ const Feature = ({ title, text, icon }) => {
         textAlign={'center'} 
         align={'center'} 
         justify={'center'}
-        color={'white'}
+        color={'background'}
         rounded={'full'}
         bg={'blue.600'}
         borderRadius="25%"
@@ -68,50 +68,50 @@ export default function Skills() {
         />
         <List marginTop={'5%'} marginLeft={'37%'} spacing={'3'}>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 C
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 C++
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 Java
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 Javascript
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 Python
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 HTML
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 CSS
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 SQL
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 React
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdComputer} color='green.500' />
                 React Native
             </ListItem>
         </List>
         </Box>
         <Box>
         <Feature
-          icon={<Icon as={GiPsychicWaves} w={10} h={10} />}
+          icon={<Icon as={GiAwareness} w={10} h={10} />}
           title={'Ability and Competence'}
           text={
             'Qualities needed to be able to perform certain behaviors.'
@@ -119,43 +119,43 @@ export default function Skills() {
         />
         <List marginTop={'5%'} marginLeft={'37%'} spacing={'3'}>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Teamwork
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Leadership
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Problem Solving
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Time Management
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Communication
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Adaptability
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Detail Oriented
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Self-Management
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Self-Confidence
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={GiAwareness} color='green.500' />
                 Handsome
             </ListItem>
         </List>
@@ -170,11 +170,11 @@ export default function Skills() {
         />
         <List marginTop={'5%'} marginLeft={'37%'} spacing={'3'}>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdLanguage} color='green.500' />
                 English
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdLanguage} color='green.500' />
                 Indonesia
             </ListItem>
         </List>

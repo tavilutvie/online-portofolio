@@ -27,8 +27,9 @@ import Education from '../pages/Education';
 import Experience from '../pages/Experience';
 import Contact from '../pages/Contact';
 import Skills from '../pages/Skills';
+import Personality from '../pages/Personality';
 
-const Links = ['About', 'Education', 'Awards', 'Experience', 'Skills', 'Contact'];
+const Links = ['About', 'Personality', 'Education', 'Awards', 'Experience', 'Skills', 'Contact'];
 
 const NavLink = ({ children }) => (
     <Link
@@ -131,6 +132,7 @@ export default function Navbar() {
               <Route path='/' element={<Home />} />
               <Route path='/About' element={<About />} />
               <Route path='/Education' element={<Education />} />
+              <Route path='/Personality' element={<Personality />} />
               <Route path='/Awards' element={<Awards />} />
               <Route path='/Experience' element={<Experience />} />
               <Route path='/Skills' element={<Skills />} />

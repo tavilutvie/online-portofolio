@@ -48,9 +48,9 @@ export default function About() {
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
             HELLO!
             <br></br><br></br>
-            My name is Eldenabih Tavirazin Lutvie from the Department of Informatics Engineering, Sepuluh Nopember Institute of Technology. 
-            <br></br>
-            I live in the city of Surabaya, East Java. I have a desire to become a great Software Developer. I'm currently interested in learning back-end programming and becoming a full stack web developer.
+            My name is Eldenabih Tavirazin Lutvie from the Department of Informatics Engineering, Sepuluh Nopember Institute of Technology. I live in the city of Surabaya, East Java. I have a desire to become a great Software Developer. I'm currently interested in learning front-end and back-end programming to become a full stack web developer.
+            <br></br><br></br>
+            I am a person who is very interested in learning new things, especially in the field of technology. I am also a person who is very diligent and responsible in carrying out my duties, very patient, and can work well in a team. I am also a person who is very sociable and easy to get along with.
           </Text>
           <Center>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
