@@ -5,6 +5,7 @@ import {
   theme,
 } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
+import Router from './components/Router';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div class='split navbar'>
           <Navbar />
         </div>
+        <Router />
       </div>
     </ChakraProvider>
   );
