@@ -18,16 +18,21 @@ import {
   useBreakpointValue,
   Text,
   Button,
-  useDisclosure,
+  // useDisclosure,
+  // Alert,
+  // AlertIcon,
+  // AlertTitle,
+  // AlertDescription,
 } from '@chakra-ui/react';
 import axios from "axios";
 import React, { useState } from "react";
-import {BsPerson} from 'react-icons/bs';
+import { BsPerson } from 'react-icons/bs';
 import { SiGithub, SiLinkedin, SiInstagram } from 'react-icons/si';
-import { MdEmail} from 'react-icons/md';
-import { HiOutlineMail} from 'react-icons/hi';
-import { AiOutlineMobile} from 'react-icons/ai';
-import DisplayAlert from '../components/Alert';
+import { MdEmail } from 'react-icons/md';
+import { HiOutlineMail } from 'react-icons/hi';
+import { AiOutlineMobile } from 'react-icons/ai';
+// import DisplayAlert from '../components/Alert';
+import { useToast } from '@chakra-ui/react'
 
 
 const confetti = {
@@ -51,7 +56,7 @@ export default function Contact() {
   // const onSubmit = data => console.log(data);
   // console.log(errors);
 
-  const { onOpen, } = useDisclosure()
+  // const { onOpen, } = useDisclosure()
 
   const [inputs, setInputs] = useState({
     email: "",
@@ -61,7 +66,7 @@ export default function Contact() {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    
+
 
     axios({
       method: "POST",
@@ -70,13 +75,18 @@ export default function Contact() {
     })
       .then((r) => {
         console.log("form submitted successfully");
-        alert(<DisplayAlert />);
+        // alert(<DisplayAlert />);
+        // <Alert status='error'>
+        //   <AlertIcon />
+        //   <AlertTitle>Your browser is outdated!</AlertTitle>
+        //   <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+        // </Alert>
       })
       .catch((r) => {
         console.log("error");
       });
   };
-  
+
   const handleOnChange = (event) => {
     event.persist();
     setInputs((prev) => ({
@@ -84,6 +94,8 @@ export default function Contact() {
       [event.target.id]: event.target.value,
     }));
   };
+
+  const toast = useToast()
 
   return (
     <Flex
@@ -96,44 +108,44 @@ export default function Contact() {
       }}
       id="contact">
       <Box
-      // width={{ base: 'full', md: 'auto' }}
+        // width={{ base: 'full', md: 'auto' }}
         borderRadius="lg"
         m={{ base: 5, md: 16, lg: 10 }}
         p={{ base: 5, lg: 16 }}>
         <Box>
           <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
-          <Heading 
-        alignContent={'center'}
-        alignSelf={'center'}
-        alignItems={'center'}
-        textAlign={'center'} 
-        align={'center'} 
-        justify={'center'}
-        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: useBreakpointValue({ base: '20%', md: '30%' }),
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'blue.400',
-                zIndex: -1,
-              }}>
-              Contact Me
-            </Text>
-            <br></br>
-            <br />{' '}
-          </Heading>
+            <Heading
+              alignContent={'center'}
+              alignSelf={'center'}
+              alignItems={'center'}
+              textAlign={'center'}
+              align={'center'}
+              justify={'center'}
+              fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+              <Text
+                as={'span'}
+                position={'relative'}
+                _after={{
+                  content: "''",
+                  width: 'full',
+                  height: useBreakpointValue({ base: '20%', md: '30%' }),
+                  position: 'absolute',
+                  bottom: 1,
+                  left: 0,
+                  bg: 'blue.400',
+                  zIndex: -1,
+                }}>
+                Contact Me
+              </Text>
+              <br></br>
+              <br />{' '}
+            </Heading>
             <Stack
               spacing={{ base: 4, md: 8, lg: 20 }}
               direction={{ base: 'column', md: 'row' }}>
               <form onSubmit={handleOnSubmit}>
                 <Box
-                // width={{ base: 'full', md: 'auto' }}
+                  // width={{ base: 'full', md: 'auto' }}
                   // display="flex"
                   bg={useColorModeValue('white', 'gray.700')}
                   borderRadius="lg"
@@ -146,14 +158,14 @@ export default function Contact() {
 
                       <InputGroup>
                         <InputLeftElement children={<BsPerson />} />
-                        <Input 
+                        <Input
                           id="subject"
-                          type="text" 
-                          name="name" 
-                          placeholder="Your Name" 
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
                           onChange={handleOnChange}
                           value={inputs.subject}
-                          // {...register("Name", {required: true, maxLength: 80})}
+                        // {...register("Name", {required: true, maxLength: 80})}
                         />
                       </InputGroup>
                     </FormControl>
@@ -170,7 +182,7 @@ export default function Contact() {
                           placeholder="Your Email"
                           onChange={handleOnChange}
                           value={inputs.email}
-                          // {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}
+                        // {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}
                         />
                       </InputGroup>
                     </FormControl>
@@ -184,7 +196,7 @@ export default function Contact() {
                           type="tel"
                           name="Mobile Number"
                           placeholder="Your Mobile Number"
-                          // {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})}
+                        // {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})}
                         />
                       </InputGroup>
                     </FormControl>
@@ -200,17 +212,27 @@ export default function Contact() {
                         resize="none"
                         onChange={handleOnChange}
                         value={inputs.message}
-                        // {...register("Message")}
+                      // {...register("Message")}
                       />
                     </FormControl>
-                      <Button colorScheme="blue"
+                    <Button colorScheme="blue"
                       bg="blue.400"
                       color="white"
                       _hover={{
                         bg: 'blue.500',
                       }}
                       isFullWidth type="submit"
-                      onClick={onOpen}>Submit</Button>
+                      onClick={() =>
+                        toast({
+                          title: 'SUCCESS',
+                          description: "Your message has been sent successfully!",
+                          status: 'success',
+                          duration: 2000,
+                          isClosable: true,
+                        })
+                      }
+                      // onClick={onOpen}
+                      >Submit</Button>
                   </VStack>
                 </Box>
               </form>
@@ -237,49 +259,61 @@ export default function Contact() {
                     isRound
                   />
                 </Tooltip>
-
-                <Link href="https://github.com/tavilutvie" isExternal>
-                  <IconButton
-                    aria-label="github"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<SiGithub />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Link href="https://www.instagram.com/tavilutvie/"  isExternal>
-                  <IconButton
-                    aria-label="instagram"
-                    variant="ghost"
-                    size="lg"
-                    icon={<SiInstagram size="28px" />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Link href="https://www.linkedin.com/in/tavilutvie/" isExternal>
-                  <IconButton
-                    aria-label="linkedin"
-                    variant="ghost"
-                    size="lg"
-                    icon={<SiLinkedin size="28px" />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Link>
+                <Tooltip
+                  label={'Open Github'}
+                  closeOnClick={false}
+                  hasArrow>
+                  <Link href="https://github.com/tavilutvie" isExternal>
+                    <IconButton
+                      aria-label="github"
+                      variant="ghost"
+                      size="lg"
+                      fontSize="3xl"
+                      icon={<SiGithub />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  label={'Open Instagram'}
+                  closeOnClick={false}
+                  hasArrow>
+                  <Link href="https://www.instagram.com/tavilutvie/" isExternal>
+                    <IconButton
+                      aria-label="instagram"
+                      variant="ghost"
+                      size="lg"
+                      icon={<SiInstagram size="28px" />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  label={'Open LinkedIn'}
+                  closeOnClick={false}
+                  hasArrow>
+                  <Link href="https://www.linkedin.com/in/tavilutvie/" isExternal>
+                    <IconButton
+                      aria-label="linkedin"
+                      variant="ghost"
+                      size="lg"
+                      icon={<SiLinkedin size="28px" />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+                  </Link>
+                </Tooltip>
               </Stack>
             </Stack>
           </VStack>

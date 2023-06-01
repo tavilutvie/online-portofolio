@@ -10,7 +10,7 @@ import {
   } from '@chakra-ui/react';
   import React from "react";
 
-export default function DisplayAlert() {
+const DisplayAlert = () => {
     const { isOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()
 
@@ -42,3 +42,5 @@ export default function DisplayAlert() {
         </AlertDialog>
     )
 }
+
+export default DisplayAlert;

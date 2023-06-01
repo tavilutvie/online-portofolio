@@ -1,21 +1,21 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
-    Box,
-    Container,
-    Stack,
-    Text,
-    Image,
-    Flex,
-    Heading,
-    SimpleGrid,
-    StackDivider,
-    useColorModeValue,
-    useBreakpointValue,
-    Divider,
-    Link,
-    HStack,
-    Tag,
-    IconButton,
+  Box,
+  Container,
+  Stack,
+  Text,
+  Image,
+  Flex,
+  Heading,
+  SimpleGrid,
+  StackDivider,
+  useColorModeValue,
+  useBreakpointValue,
+  Divider,
+  Link,
+  HStack,
+  Tag,
+  IconButton,
 } from '@chakra-ui/react';
 import { SiInstagram, SiTwitter } from 'react-icons/si';
 
@@ -25,21 +25,21 @@ const BlogTags = (props) => {
       alignContent={'center'}
       alignSelf={'center'}
       alignItems={'center'}
-      textAlign={'center'} 
-      align={'center'} 
+      textAlign={'center'}
+      align={'center'}
       justify={'center'}
-      spacing={2} 
+      spacing={2}
       marginTop={props.marginTop}>
       {props.tags.map((tag) => {
         return (
-          <Tag 
-          objectFit="contain" 
-          width={'max-content'} 
-          height={'max-content'}
-          size={'md'} 
-          variant="solid" 
-          colorScheme="orange" 
-          key={tag}>
+          <Tag
+            objectFit="contain"
+            width={'max-content'}
+            height={'max-content'}
+            size={'md'}
+            variant="solid"
+            colorScheme="orange"
+            key={tag}>
             {tag}
           </Tag>
         );
@@ -51,14 +51,14 @@ const BlogTags = (props) => {
 export default function Experience() {
   return (
     <Container maxW={'7xl'}>
-      <Heading 
-      alignContent={'center'}
-      alignSelf={'center'}
-      alignItems={'center'}
-      textAlign={'center'} 
-      align={'center'} 
-      justify={'center'}
-      fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+      <Heading
+        alignContent={'center'}
+        alignSelf={'center'}
+        alignItems={'center'}
+        textAlign={'center'}
+        align={'center'}
+        justify={'center'}
+        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
         <Text
           as={'span'}
           position={'relative'}
@@ -86,19 +86,19 @@ export default function Experience() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
         mb={'90px'}
-        >
+      >
         <Flex>
           <Box
             flex="1"
             flexDirection="column"
             justifyContent="center"
             marginTop={{ base: '0', sm: '0', lg: '-10' }}
-            textAlign={{ base: 'center'}}
-            >
+            textAlign={{ base: 'center' }}
+          >
             <Image
               rounded={'md'}
               alt={'product image'}
-              src={'images/reeva.jpg'}
+              src={'images/reeva.png'}
               fit={'contain'}
               align={'center'}
               w={'100%'}
@@ -112,14 +112,14 @@ export default function Experience() {
             </Heading>
             <br></br>
             <BlogTags tags={['Surabaya', 'Jawa Timur', 'Indonesia']} />
-            <Stack 
+            <Stack
               alignContent={'center'}
               alignSelf={'center'}
               alignItems={'center'}
-              textAlign={'center'} 
-              align={'center'} 
-              justify={'center'} 
-              marginTop={'10px'} 
+              textAlign={'center'}
+              align={'center'}
+              justify={'center'}
+              marginTop={'10px'}
               direction={{ base: 'row' }}>
               <Link href="https://www.instagram.com/schematics.its/" isExternal>
                 <IconButton
@@ -148,7 +148,7 @@ export default function Experience() {
                 />
               </Link>
             </Stack>
-            
+
           </Box>
         </Flex>
         <Stack spacing={{ base: 6, md: 10 }}>
@@ -177,7 +177,7 @@ export default function Experience() {
               mb={'4'}>
               Work Section
             </Text>
-            
+
             <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl' }}
@@ -196,8 +196,8 @@ export default function Experience() {
               <Text fontSize={'md'}>
                 Responsible for preparing drafted footage in Schematics Reeva.
               </Text>
-              </Box>
-              <Box>
+            </Box>
+            <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 color={useColorModeValue('blue.500', 'blue.300')}
@@ -215,7 +215,7 @@ export default function Experience() {
               <Text fontSize={'md'}>
                 Responsible for preparing things related to Schematics Reeva event production.
               </Text>
-              </Box>
+            </Box>
           </Stack>
 
         </Stack>
@@ -226,15 +226,15 @@ export default function Experience() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
         mb={'90px'}
-        >
+      >
         <Flex>
           <Box
             flex="1"
             flexDirection="column"
             justifyContent="center"
             marginTop={{ base: '0', sm: '0', lg: '-10' }}
-            textAlign={{ base: 'center'}}
-            >
+            textAlign={{ base: 'center' }}
+          >
             <br></br>
             <Heading marginTop="1">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
@@ -263,14 +263,14 @@ export default function Experience() {
               mb={'4'}>
               Work Section
             </Text>
-            
+
             <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 color={useColorModeValue('blue.500', 'blue.300')}
                 fontWeight={'500'}
                 mb={'2'}>
-                Property Staff 
+                Property Staff
               </Text>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
@@ -281,8 +281,8 @@ export default function Experience() {
               </Text>
               <Text fontSize={'md'}>
                 Responsible for preparing and supplying Nouveau event equipments and needs.</Text>
-              </Box>
-              <Box>
+            </Box>
+            <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 color={useColorModeValue('blue.500', 'blue.300')}
@@ -299,7 +299,7 @@ export default function Experience() {
               </Text>
               <Text fontSize={'md'}>
                 Responsible for setting up vehicles and providing transportation needs for Nouveau event.</Text>
-              </Box>
+            </Box>
           </Stack>
 
         </Stack>
@@ -310,15 +310,15 @@ export default function Experience() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
         mb={'90px'}
-        >
+      >
         <Flex>
           <Box
             flex="1"
             flexDirection="column"
             justifyContent="center"
             marginTop={{ base: '0', sm: '0', lg: '-10' }}
-            textAlign={{ base: 'center'}}
-            >
+            textAlign={{ base: 'center' }}
+          >
             <br></br>
             <Heading marginTop="1">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
@@ -347,14 +347,14 @@ export default function Experience() {
               mb={'4'}>
               Work Section
             </Text>
-            
+
             <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 color={useColorModeValue('blue.500', 'blue.300')}
                 fontWeight={'500'}
                 mb={'2'}>
-                Robotics Event Staff  
+                Robotics Event Staff
               </Text>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
@@ -364,8 +364,8 @@ export default function Experience() {
                 2018
               </Text>
               <Text fontSize={'md'}>
-              Responsible for designing and organizing Robotics competition events in Eunoia.</Text>
-              </Box>
+                Responsible for designing and organizing Robotics competition events in Eunoia.</Text>
+            </Box>
           </Stack>
 
         </Stack>
@@ -376,15 +376,15 @@ export default function Experience() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
         mb={'90px'}
-        >
+      >
         <Flex>
           <Box
             flex="1"
             flexDirection="column"
             justifyContent="center"
             marginTop={{ base: '0', sm: '0', lg: '-10' }}
-            textAlign={{ base: 'center'}}
-            >
+            textAlign={{ base: 'center' }}
+          >
             <br></br>
             <Heading marginTop="1">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
@@ -413,14 +413,14 @@ export default function Experience() {
               mb={'4'}>
               Work Section
             </Text>
-            
+
             <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 color={useColorModeValue('blue.500', 'blue.300')}
                 fontWeight={'500'}
                 mb={'2'}>
-                Property Staff 
+                Property Staff
               </Text>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
@@ -431,7 +431,7 @@ export default function Experience() {
               </Text>
               <Text fontSize={'md'}>
                 Responsible for preparing and supplying Senyuman event equipments and needs.</Text>
-              </Box>
+            </Box>
           </Stack>
 
         </Stack>

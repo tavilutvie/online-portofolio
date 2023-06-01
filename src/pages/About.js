@@ -1,14 +1,14 @@
 import './About.css';
 import {
-  Center,
-  Button,
+  // Center,
+  // Button,
   Flex,
   Heading,
   Image,
   Stack,
   Text,
   useBreakpointValue,
-  Link,
+  // Link,
 } from '@chakra-ui/react';
 
 import React from 'react';
@@ -52,7 +52,7 @@ export default function About() {
             <br></br><br></br>
             I am a person who is very interested in learning new things, especially in the field of technology. I am also a person who is very diligent and responsible in carrying out my duties, very patient, and can work well in a team. I am also a person who is very sociable and easy to get along with.
           </Text>
-          <Center>
+          {/* <Center>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
               <Link href="/" isExternal>
                 <Button
@@ -77,7 +77,7 @@ export default function About() {
                 </Button>
               </Link>
             </Stack>
-          </Center>
+          </Center> */}
         </Stack>
       </Flex>
       <Flex p={8} flex={1} 

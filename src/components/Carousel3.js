@@ -38,16 +38,16 @@ export default function Carousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      image: 'images/psgs.jpg',
+      image: 'images/psgs-v1.3.png',
     },
     {
-      image: 'images/psgs1.jpg',
+      image: 'images/psgs-v2.2.png',
     },
     {
-      image: 'images/psgs2.jpg',
+      image: 'images/psgs-v3.2.png',
     },
     {
-        image: 'images/psgs3.jpg',
+        image: 'images/psgs-v4.2.png',
     },
   ];
 
@@ -109,6 +109,7 @@ export default function Carousel() {
             transform="scale(1.0)"
             objectFit="contain"
             width="100%"
+            border='1px' borderColor='blue.600' borderWidth={5}
             backgroundImage={`url(${card.image})`}>
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="300px" position="relative">

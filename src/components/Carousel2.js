@@ -6,7 +6,7 @@ import {
   Stack,
   Heading,
   Container,
-  Center,
+  // Center,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
@@ -41,21 +41,35 @@ export default function Carousel() {
   const cards = [
     {
       title: 'SMA Negeri 5 Surabaya',
-      text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'images/smala.jpg',
+      image: 'images/smala-v3.3.png',
+    },
+    {
+      title: 'SMA Negeri 5 Surabaya',
+      image: 'images/smala-v1.3.png',
+    },
+    {
+      title: 'SMA Negeri 5 Surabaya',
+      image: 'images/smala-v2.3.png',
     },
     {
       title: 'SMP Negeri 1 Surabaya',
-      text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'images/spensa.jpg',
+      image: 'images/spensa-v4.2.png',
+    },
+    {
+      title: 'SMP Negeri 1 Surabaya',
+      image: 'images/spensa-v1.4.png',
+    },
+    {
+      title: 'SMP Negeri 1 Surabaya',
+      image: 'images/spensa-v3.3.png',
     },
     {
       title: 'Pelita Jaya School',
-      text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'images/pjs.jpg',
+      image: 'images/pjs-v2.3.png',
+    },
+    {
+      title: 'Pelita Jaya School',
+      image: 'images/pjs-v3.3.png',
     },
   ];
 
@@ -66,7 +80,7 @@ export default function Carousel() {
       width='70%'
       overflow={'hidden'}
       mx='auto'
-      >
+    >
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -129,14 +143,14 @@ export default function Carousel() {
                 left={'50%'}
                 textAlign="center"
                 transform="translate(-50%, -50%)">
-                  <Center>
-                    <Heading bgColor={'Highlight'} textColor={'navy'} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} width={'90%'}>
-                      {card.title}
-                    </Heading>
-                    {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                {/* <Center> */}
+                <Heading bgColor={'Highlight'} textColor={'navy'} fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }} width={'110%'}>
+                  {card.title}
+                </Heading>
+                {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
                       {card.text}
                     </Text> */}
-                  </Center>
+                {/* </Center> */}
               </Stack>
             </Container>
           </Box>

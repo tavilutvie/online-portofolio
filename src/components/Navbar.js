@@ -56,7 +56,7 @@ export default function Navbar() {
                         as={'nav'}
                         spacing={4}
                         display={{ base: 'none', md: 'flex' }}>
-                            <a href="/"><img width={'40px'} className="home"  src="images/home.png" alt="home" /></a>
+                            <a href="/"><img width={'40px'} className="home"  src="favicon.ico" alt="home" /></a>
                             {Links.map((link) => (
                                 <NavLink key={link}>{link}</NavLink>
                             ))}
@@ -95,8 +95,8 @@ export default function Navbar() {
                                         <p>Eldenabih Tavirazin Lutvie</p>
                                     </Center>
                                     <MenuDivider />
-                                    <Link href="/" isExternal><MenuItem>My Primary Portofolio</MenuItem></Link>
-                                    <Link href="https://sop.tavilutvie.dev/" isExternal><MenuItem>My Secondary Portofolio</MenuItem></Link>
+                                    <Link href="/" isExternal><MenuItem>My Portofolio</MenuItem></Link>
+                                    {/* <Link href="https://sop.tavilutvie.dev/" isExternal><MenuItem>My Secondary Portofolio</MenuItem></Link> */}
                                     <MenuDivider />
                                     <Link href="https://rrg.tavilutvie.dev/" isExternal><MenuItem>Random Recipe Generator</MenuItem></Link>
                                 </MenuList>
@@ -108,7 +108,7 @@ export default function Navbar() {
                 {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
-                    <a href="/"><img width={'40px'} className="home"  src="images/home.png" alt="home" /></a>
+                    <a href="/"><img width={'40px'} className="home"  src="favicon.ico" alt="home" /></a>
                         {Links.map((link) => (
                             <NavLink key={link}>{link}</NavLink>
                         ))}
