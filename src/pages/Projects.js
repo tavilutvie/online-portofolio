@@ -31,10 +31,10 @@ const projectList = [
     url: 'https://rrg.tavilutvie.dev/',
   },
   {
-    title: 'Bumping Car',
+    title: 'Soccer Car',
     language: 'Javascript',
-    image: 'images/randomRecipeGenerator.png',
-    text: 'Bumping Cars is an exciting multiplayer game that combines the thrill of fast-paced car battles with the competitive nature of Rocket League. ',
+    image: 'images/soccerCar.png',
+    text: 'Soccer Car is an exciting multiplayer game that combines the thrill of fast-paced car battles with the competitive nature of Rocket League. ',
     github: '',
     url: 'https://cgg.tavilutvie.dev/',
   },
