@@ -8,6 +8,7 @@ import Awards from "../pages/Awards";
 import Experience from "../pages/Experience";
 import Skills from "../pages/Skills";
 import Contact from "../pages/Contact";
+import Projects from "../pages/Projects";
 
 export default function Router() {
   return (
@@ -20,6 +21,7 @@ export default function Router() {
         <Route path='/Experience' element={<Experience />} />
         <Route path='/Skills' element={<Skills />} />
         <Route path='/Contact' element={<Contact />} />
+        <Route path='/Projects' element={<Projects />} />
     </Routes>
   );
 }
