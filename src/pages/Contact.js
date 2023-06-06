@@ -52,6 +52,8 @@ const CONFETTI_DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2
 
 export default function Contact() {
   const { hasCopied, onCopy } = useClipboard('tavirazin@gmail.com');
+
+  const toast = useToast()
   // const { register, handleSubmit, formState: { errors } } = useForm();
   // const onSubmit = data => console.log(data);
   // console.log(errors);
@@ -59,6 +61,7 @@ export default function Contact() {
   // const { onOpen, } = useDisclosure()
 
   const [inputs, setInputs] = useState({
+    name: "",
     email: "",
     subject: "",
     message: "",
@@ -75,6 +78,20 @@ export default function Contact() {
     })
       .then((r) => {
         console.log("form submitted successfully");
+        toast({
+          title: 'SUCCESS',
+          description: "Your message has been sent successfully!",
+          status: 'success',
+          duration: 2000,
+          isClosable: true,
+        })
+        // setRecords([...records, formValues]);
+        setInputs({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
         // alert(<DisplayAlert />);
         // <Alert status='error'>
         //   <AlertIcon />
@@ -95,7 +112,7 @@ export default function Contact() {
     }));
   };
 
-  const toast = useToast()
+
 
   return (
     <Flex
@@ -108,7 +125,7 @@ export default function Contact() {
       }}
       id="contact">
       <Box
-        // width={{ base: 'full', md: 'auto' }}
+        // width={{ base: 'full', md: 'auto', lg:'full' }}
         borderRadius="lg"
         m={{ base: 5, md: 16, lg: 10 }}
         p={{ base: 5, lg: 16 }}>
@@ -153,18 +170,19 @@ export default function Contact() {
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                   shadow="base">
                   <VStack spacing={5}>
+
                     <FormControl isRequired>
                       <FormLabel>Name</FormLabel>
 
                       <InputGroup>
                         <InputLeftElement children={<BsPerson />} />
                         <Input
-                          id="subject"
+                          id="name"
                           type="text"
                           name="name"
                           placeholder="Your Name"
                           onChange={handleOnChange}
-                          value={inputs.subject}
+                          value={inputs.name}
                         // {...register("Name", {required: true, maxLength: 80})}
                         />
                       </InputGroup>
@@ -187,16 +205,33 @@ export default function Contact() {
                       </InputGroup>
                     </FormControl>
 
-                    <FormControl isRequired>
+                    <FormControl>
                       <FormLabel>Number</FormLabel>
 
                       <InputGroup>
                         <InputLeftElement children={<AiOutlineMobile />} />
                         <Input
-                          type="tel"
+                          type="telp"
                           name="Mobile Number"
                           placeholder="Your Mobile Number"
                         // {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl>
+                      <FormLabel>Subject</FormLabel>
+
+                      <InputGroup>
+
+                        <Input
+                          id="subject"
+                          type="text"
+                          name="subject"
+                          placeholder="Subject"
+                          onChange={handleOnChange}
+                          value={inputs.subject}
+                        // {...register("Name", {required: true, maxLength: 80})}
                         />
                       </InputGroup>
                     </FormControl>
@@ -207,7 +242,7 @@ export default function Contact() {
                       <Textarea
                         id="message"
                         name="message"
-                        placeholder="Your Message"
+                        placeholder="Message"
                         rows={6}
                         resize="none"
                         onChange={handleOnChange}
@@ -222,17 +257,17 @@ export default function Contact() {
                         bg: 'blue.500',
                       }}
                       isFullWidth type="submit"
-                      onClick={() =>
-                        toast({
-                          title: 'SUCCESS',
-                          description: "Your message has been sent successfully!",
-                          status: 'success',
-                          duration: 2000,
-                          isClosable: true,
-                        })
-                      }
-                      // onClick={onOpen}
-                      >Submit</Button>
+                    // onSubmit={() =>
+                    //   toast({
+                    //     title: 'SUCCESS',
+                    //     description: "Your message has been sent successfully!",
+                    //     status: 'success',
+                    //     duration: 2000,
+                    //     isClosable: true,
+                    //   })
+                    // }
+                    // onClick={onOpen}
+                    >Submit</Button>
                   </VStack>
                 </Box>
               </form>

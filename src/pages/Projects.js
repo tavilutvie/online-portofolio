@@ -5,7 +5,6 @@ import {
   Img,
   Flex,
   Center,
-  useColorModeValue,
   HStack,
   Link,
   Container,
@@ -23,6 +22,23 @@ const projectList = [
     github: '',
     url: 'https://www.sibabe.app/',
   },
+  {
+    title: 'Random Recipe Generator',
+    language: 'ReactJs',
+    image: 'images/randomRecipeGenerator.png',
+    text: 'Your go-to source for culinary inspiration!Explore an extensive range of cuisines from around the world, from classic comfort foods to exotic and adventurous dishes.',
+    github: '',
+    url: 'https://rrg.tavilutvie.dev/',
+  },
+  {
+    title: 'Bumping Car',
+    language: 'Javascript',
+    image: 'images/randomRecipeGenerator.png',
+    text: 'Bumping Cars is an exciting multiplayer game that combines the thrill of fast-paced car battles with the competitive nature of Rocket League. ',
+    github: '',
+    url: 'https://cgg.tavilutvie.dev/',
+  },
+  
 ];
 
 export default function Projects() {
@@ -59,7 +75,8 @@ export default function Projects() {
         {projectList.map((project, index) => (
           <Center py={6}>
             <Box
-              w="xs"
+              w="s"
+              h={'full'}
               rounded={'sm'}
               my={5}
               mx={[0, 5]}
@@ -67,7 +84,7 @@ export default function Projects() {
               bg="white"
               border={'1px'}
               borderColor="black"
-            // boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}
+              boxShadow="6px 6px 0 black" _dark={{ boxShadow: "6px 6px 0 cyan" }}
             >
               <Box h={'200px'} borderBottom={'1px'} borderColor="black">
                 <Img
@@ -88,18 +105,18 @@ export default function Projects() {
                   color="white"
                   mb={2}>
                   <Text fontSize={'xs'} fontWeight="medium">
-                  {project.language}
+                    {project.language}
                   </Text>
                 </Box>
                 <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
-                {project.title}
+                  {project.title}
                 </Heading>
-                <Text color={'gray.500'} noOfLines={2}>
+                <Text color={'gray.500'} noOfLines={7}>
                   {project.text}
                 </Text>
               </Box>
               <Link href={project?.url} isExternal>
-                <HStack borderTop={'1px'} color="black">
+                <HStack borderTop={'1px'} borderBottom={'1px'} color="black">
                   <Flex
                     p={4}
                     alignItems="center"
