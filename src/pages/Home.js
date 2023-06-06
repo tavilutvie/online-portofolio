@@ -11,8 +11,8 @@ import {
     return (
       <Flex
         w={'full'}
-        h={'100vh'}
-        backgroundImage={'images/foto9.jpg'}
+        h="5xl"
+        backgroundImage={'images/foto9.2.png'}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}>
         <VStack
@@ -33,7 +33,7 @@ import {
                 fontWeight={200}
                 lineHeight={0.8}
                 fontSize={useBreakpointValue({ base: 'md', md: 'lg' })}>
-                click the buttons below to see more about me
+                click the button below to see more about me
             </Text>
             <Stack direction={'row'}>
             <a href="about">
