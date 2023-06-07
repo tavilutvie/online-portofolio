@@ -38,7 +38,22 @@ const projectList = [
     github: '',
     url: 'https://cgg.tavilutvie.dev/',
   },
-  
+  {
+    title: 'Simple Calculator',
+    language: 'Javascript, HTML, & CSS',
+    image: 'images/calculator.png',
+    text: 'A simple calculator to help solve math problems.',
+    github: '',
+    url: 'https://calculator.tavilutvie.dev/',
+  },
+  {
+    title: 'FinProH8',
+    language: 'ReactJs',
+    image: 'images/finproh8.png',
+    text: 'Website to browse movies with the help of API',
+    github: '',
+    url: 'https://fp-4.vercel.app/',
+  },
 ];
 
 export default function Projects() {
