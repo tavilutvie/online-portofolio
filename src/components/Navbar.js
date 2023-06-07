@@ -19,6 +19,7 @@ import {
     Center,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import projectList from './projectList';
 
 const Links = ['About', 'Personality', 'Education', 'Awards', 'Experience', 'Projects', 'Skills', 'Contact'];
 
@@ -98,7 +99,9 @@ export default function Navbar() {
                                     <Link href="/" isExternal><MenuItem>My Portofolio</MenuItem></Link>
                                     {/* <Link href="https://sop.tavilutvie.dev/" isExternal><MenuItem>My Secondary Portofolio</MenuItem></Link> */}
                                     <MenuDivider />
-                                    <Link href="https://rrg.tavilutvie.dev/" isExternal><MenuItem>Random Recipe Generator</MenuItem></Link>
+                                    {projectList.map((project) => (
+                                    <Link href={project?.url} isExternal><MenuItem>{project.title}</MenuItem></Link>
+                                    ))}
                                 </MenuList>
                             </Menu>
                         </Stack>
