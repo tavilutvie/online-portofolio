@@ -106,7 +106,7 @@ export default function Experience() {
             />
             <br></br>
             <Heading marginTop="1">
-              <Link href='https://schematics.its.ac.id/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+              <Link href='https://schematics-its.com/' isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 Schematics ITS <ExternalLinkIcon mx='3px' boxSize={'20px'} />
               </Link>
             </Heading>

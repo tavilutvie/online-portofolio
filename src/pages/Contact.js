@@ -63,6 +63,7 @@ export default function Contact() {
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
+    number: "",
     subject: "",
     message: "",
   });
@@ -89,6 +90,7 @@ export default function Contact() {
         setInputs({
           name: "",
           email: "",
+          number: "",
           subject: "",
           message: ""
         });
@@ -211,9 +213,12 @@ export default function Contact() {
                       <InputGroup>
                         <InputLeftElement children={<AiOutlineMobile />} />
                         <Input
+                          id="number"
                           type="telp"
                           name="Mobile Number"
                           placeholder="Your Mobile Number"
+                          onChange={handleOnChange}
+                          value={inputs.number}
                         // {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})}
                         />
                       </InputGroup>

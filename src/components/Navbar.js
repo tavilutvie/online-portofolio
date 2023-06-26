@@ -57,7 +57,7 @@ export default function Navbar() {
                         as={'nav'}
                         spacing={4}
                         display={{ base: 'none', md: 'flex' }}>
-                            <a href="/"><img width={'40px'} className="home"  src="favicon.ico" alt="home" /></a>
+                            <a href="/"><img width={'80px'} className="home"  src="My Logo.png" alt="home" /></a>
                             {Links.map((link) => (
                                 <NavLink key={link}>{link}</NavLink>
                             ))}
@@ -111,7 +111,7 @@ export default function Navbar() {
                 {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
-                    <a href="/"><img width={'40px'} className="home"  src="favicon.ico" alt="home" /></a>
+                    <a href="/"><img width={'80px'} className="home"  src="My Logo.png" alt="home" /></a>
                         {Links.map((link) => (
                             <NavLink key={link}>{link}</NavLink>
                         ))}
